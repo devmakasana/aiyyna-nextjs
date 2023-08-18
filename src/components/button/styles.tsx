@@ -2,7 +2,6 @@ import styled, { css, keyframes } from 'styled-components';
 
 interface WrapButton {
   secondary: any;
-  size: any;
   buttonwidth?: any;
 }
 

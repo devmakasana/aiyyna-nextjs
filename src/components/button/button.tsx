@@ -6,7 +6,6 @@ interface Props {
   title?: string;
   onClick?: (e: SyntheticEvent) => void;
   type?: 'reset' | 'submit' | 'button';
-  size?: string;
   secondary?: boolean;
   width?: number;
   style?: Style;
@@ -17,7 +16,6 @@ interface Props {
 const Button: React.FC<Props> = (Props) => {
   const {
     title,
-    size,
     type,
     onClick,
     secondary,
@@ -32,7 +30,6 @@ const Button: React.FC<Props> = (Props) => {
         onClick && onClick(e);
       }}
       secondary={secondary}
-      size={size}
       type={type}
       buttonwidth={width}
       {...props}>
