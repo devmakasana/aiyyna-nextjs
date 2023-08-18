@@ -4,7 +4,7 @@ import React from 'react';
 import { Main, Content, Description } from './styles';
 import Button from '../button/button';
 
-export default function Footercta() {
+export default function FooterCTA() {
   return (
     <div>
       <Main>
