@@ -11,12 +11,6 @@ const Maindiv = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const Container = styled.div`
-  width: 100%;
-  max-width: 1440px;
-  margin: auto;
-  padding: 0 72px;
-`;
 
 const Logo = styled.div`
   height: 42px;
@@ -42,4 +36,4 @@ const Links = styled.div`
   }
 `;
 
-export { Container, Logo, MainHeader, Maindiv, Rightheader, Links };
+export {  Logo, MainHeader, Maindiv, Rightheader, Links };

@@ -1,9 +1,10 @@
 import React from 'react';
-import { Container, Links, Logo, MainHeader, Maindiv, Rightheader } from './styles';
+import {  Links, Logo, MainHeader, Maindiv, Rightheader } from './styles';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from '../button/button';
 import logo from '../../../public/images/aiyynalogo.svg';
+import { Container } from '@/app/styles/commoncontainer';
 
 interface Props {
 
