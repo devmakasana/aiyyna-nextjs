@@ -2,7 +2,7 @@ import styled, { css, keyframes } from 'styled-components';
 
 interface WrapButton {
   secondary: any;
-  buttonwidth?: any;
+  width?: any;
 }
 
 const Buttons = styled.button<WrapButton>`
@@ -43,6 +43,11 @@ const Buttons = styled.button<WrapButton>`
         background-color: rgba(0, 0, 0, 0);
         border: none;
       }
+    `}
+    ${(props) =>
+    props.width &&
+    css`
+      width: ${props.width}px;
     `}
 `;
 
