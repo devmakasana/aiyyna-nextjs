@@ -9,21 +9,11 @@ interface Props {
   secondary?: boolean;
   width?: number;
   style?: Style;
-  buttonwidth?: string;
   id?: string;
 }
 
 const Button: React.FC<Props> = (Props) => {
-  const {
-    title,
-    type,
-    onClick,
-    secondary,
-    width,
-    style,
-    buttonwidth,
-    ...props
-  } = Props;
+  const { title, type, onClick, secondary, style, width, ...props } = Props;
   return (
     <Buttons
       onClick={(e: React.SyntheticEvent<Element, Event>) => {
@@ -31,7 +21,7 @@ const Button: React.FC<Props> = (Props) => {
       }}
       secondary={secondary}
       type={type}
-      buttonwidth={width}
+      width={width}
       {...props}>
       <a>{title || ''}</a>
     </Buttons>
