@@ -23,7 +23,7 @@ const Maindiv = styled.div`
     background-color: #b6dfff;
     position: absolute;
     bottom: 276px;
-    left: 722px;
+    left: 790px;
     right: auto;
     @media screen and (max-width: 991px) {
       bottom: 0;
