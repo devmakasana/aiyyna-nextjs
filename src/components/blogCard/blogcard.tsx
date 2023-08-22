@@ -1,29 +1,27 @@
 'use client';
 import React from 'react';
-import { Main, Below, Datetitle, Description, Content } from './styles';
+import { Below, Datetitle, Description, Content } from './styles';
 import Image from 'next/image';
 
 interface props {
   imgSrc: string;
-  height: number;
   width: number;
-  className: string;
+  height: number;
   datetitle: string;
-  description: string;
+  descriprion: string;
+  href: string;
 }
 
 export default function Blogcard(props: props) {
   return (
     <>
-      <Main>
-        <Content>
-          <Image src={props.imgSrc} alt='image' width={props.width} height={props.height} className={props.className} />
-          <Below>
-            <Datetitle>{props.datetitle}</Datetitle>
-            <Description>{props.description}</Description>
-          </Below>
-        </Content>
-      </Main>
+      <Content href={props.href}>
+        <Image src={props.imgSrc} alt='image' width={props.width} height={props.height} className='card-image' />
+        <Below>
+          <Datetitle>{props.datetitle}</Datetitle>
+          <Description>{props.descriprion}</Description>
+        </Below>
+      </Content>
     </>
   );
 }
