@@ -1,15 +1,18 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 
-const Main = styled.div`
+const Content = styled(Link)`
+  display: flex;
+  flex-direction: column;
   max-width: 410px;
   width: 100%;
   border: 1px solid #dfe5f1;
   border-radius: 10px;
-`;
-const Content = styled.div`
-  display: flex;
-  flex-direction: column;
-
+  transition: all 0.3s;
+  background: #fff;
+  &:hover {
+    box-shadow: 4px 4px 40px -32px rgba(102, 94, 154, 0.12);
+  }
   .card-image {
     background-size: cover;
     border-radius: 10px 10px 0 0;
@@ -45,4 +48,4 @@ const Description = styled.div`
   -webkit-line-clamp: 2;
   overflow: hidden;
 `;
-export { Main, Below, Datetitle, Description, Content };
+export { Below, Datetitle, Description, Content };
