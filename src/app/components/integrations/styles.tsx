@@ -15,12 +15,11 @@ const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 80px 0;
-  .abc {
+  .icons {
     width: 100%;
     max-width: 925px;
     grid-row-gap: 25px;
     flex-direction: column;
-
     align-items: flex-end;
     margin-right: -123px;
     padding-left: 25px;
