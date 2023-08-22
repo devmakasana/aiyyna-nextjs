@@ -15,7 +15,7 @@ export default function Integrations() {
               200+ Integrations <br></br> to help your business grow
             </Description>
           </Leftcontent>
-          <div className='abc'>
+          <div className='icons'>
           <Rightcontent>
             <Row1>
               <Iconbox imgsrc='/images/ebay.svg' height={26} width={66} />

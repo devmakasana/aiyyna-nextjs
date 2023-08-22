@@ -4,7 +4,7 @@ import Link from 'next/link';
 const Content = styled(Link)`
   display: flex;
   flex-direction: column;
-  max-width: 410px;
+  max-width: 412px;
   width: 100%;
   border: 1px solid #dfe5f1;
   border-radius: 10px;

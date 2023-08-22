@@ -24,6 +24,18 @@ export default function Herosection() {
             <Images>
               <Image src={'/images/heroimage.svg'} alt='heroimage' width={900} height={586} className='heroimage' />
             </Images>
+            <div className='image circle'>
+              <Image src={'/images/blueshape.png'} alt='heroimage' width={367} height={378} className='image' />
+            </div>
+            <div className='image ellipse'>
+              <Image src={'/images/pinkshape.png'} alt='heroimage' width={593} height={353} className='image' />
+            </div>
+            <div className='image white'>
+              <Image src={'/images/whiteshape.png'} alt='heroimage' width={375} height={755} className='image' />
+            </div>
+            <div className='image round'>
+              <Image src={'/images/purplehape.png'} alt='heroimage' width={367} height={267} className='image' />
+            </div>
           </Rightcontent>
         </Maindiv>
       </Container>

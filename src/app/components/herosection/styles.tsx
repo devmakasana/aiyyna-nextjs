@@ -70,7 +70,7 @@ const Maindiv = styled.div`
     right: 3%;
     width: 991px;
     @media screen and (max-width: 991px) {
-      bottom: 115px;
+      bottom: 0;
     }
   }
 `;
