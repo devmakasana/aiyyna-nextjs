@@ -13,11 +13,12 @@ const Container = styled.div`
 `;
 
 const MainHeader = styled.div`
+  position: relative;
   z-index: 99;
   background-color: rgba(0, 0, 0, 0);
   padding-top: 30px;
-  @media (max-width: 449px) {
-    padding-top: 24px;
+  @media (max-width: 991px) {
+    padding-top: 20px;
   }
 `;
 const Maindiv = styled.div`
@@ -32,7 +33,7 @@ const Maindiv = styled.div`
 
 const Logo = styled.div`
   height: 42px;
-  @media (max-width: 449px) {
+  @media (max-width: 991px) {
     height: 38px;
 
     .responsivelogo {
@@ -46,7 +47,7 @@ const Rightheader = styled.div`
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  @media (max-width: 449px) {
+  @media (max-width: 991px) {
     display: none;
   }
 `;
@@ -63,7 +64,7 @@ const Links = styled.div`
     font-weight: 500;
     line-height: 20px;
   }
-  @media (max-width: 449px) {
+  @media (max-width: 991px) {
     width: 100%;
     flex-direction: column;
     border: none;
@@ -74,7 +75,7 @@ const Links = styled.div`
 
 const Icon = styled.div`
   display: none;
-  @media (max-width: 449px) {
+  @media (max-width: 991px) {
     display: block;
   }
 `;
@@ -112,7 +113,7 @@ const MobileMenu = styled.div`
   height: 14px;
   width: 22px;
   display: none;
-  @media only screen and (max-width: 449px) {
+  @media only screen and (max-width: 991px) {
     display: block;
   }
 `;
