@@ -4,8 +4,8 @@ const Container = styled.div`
   max-width: 1440px;
   margin: auto;
   padding: 0 72px;
-   @media (max-width: 449px) {
-   padding: 0 15px;
+  @media (max-width: 991px) {
+    padding: 0 15px;
   }
 `;
 
