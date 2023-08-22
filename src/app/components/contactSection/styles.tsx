@@ -9,9 +9,7 @@ const Content = styled.div`
   padding-bottom: 50px;
 `;
 
-const Main = styled.div`
-  background: #fbfbff;
-`;
+const Main = styled.div``;
 
 const Left = styled.div`
   width: 50%;
