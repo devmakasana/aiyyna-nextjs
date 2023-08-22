@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 const Main = styled.div`
-  padding-top: 120px;
-  padding-bottom: 120px;
+  width: 100%;
+  max-width: 588px;
 `;
 
 const Content = styled.div`
@@ -9,8 +9,6 @@ const Content = styled.div`
   border: 1px solid #dfe5f1;
   background: #fff;
   box-shadow: 2px 2px 40px 0px rgba(102, 94, 154, 0.08);
-  max-width: 588px;
-  width: 100;
 `;
 
 const Form = styled.div`
