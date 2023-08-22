@@ -12,9 +12,20 @@ const Main = styled.div`
 const Content = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  justify-content: space-between;
   align-items: center;
-  padding: 80px 0 80px 72px;
+  padding: 80px 0;
+  .abc {
+    width: 100%;
+    max-width: 925px;
+    grid-row-gap: 25px;
+    flex-direction: column;
+
+    align-items: flex-end;
+    margin-right: -123px;
+    padding-left: 25px;
+    display: flex;
+  }
 `;
 const Title = styled.div`
   color: #635bff;
@@ -34,6 +45,8 @@ const Leftcontent = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 100%;
+  max-width: 450px;
 `;
 
 const Rightcontent = styled.div`
@@ -61,7 +74,7 @@ const Row2 = styled.div`
   display: flex;
   max-width: 900px;
   justify-content: flex-start;
-  transform: translate(38px);   
+  transform: translate(38px);
 `;
 const Mainbox = styled.div`
   display: flex;

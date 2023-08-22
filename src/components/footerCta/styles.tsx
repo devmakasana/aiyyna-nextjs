@@ -10,7 +10,8 @@ const Main = styled.div`
 `;
 
 const Content = styled.div`
-  padding: 120px;
+  padding-top: 105px;
+  padding-bottom: 120px;
   display: flex;
   flex-direction: column;
   gap: 30px;

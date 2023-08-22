@@ -3,22 +3,22 @@ import React from 'react';
 import Image from 'next/image';
 import { Card, CardImage, CardDescription, Description, Heading, Para } from './styles';
 import cardimage from '../../../public/images/cardimage.png';
-
-export default function FeatureCard() {
+interface props {
+  src: string;
+  description?: String;
+  title: string;
+}
+export default function FeatureCard(props: props) {
   return (
     <>
       <Card href={''}>
         <CardImage>
-          <Image src={cardimage} alt='invoicing card' width={412} height={220} className='card-image' />
+          <Image src={props.src} alt='invoicing card' width={412} height={220} className='card-image' />
         </CardImage>
         <CardDescription>
           <Description>
-            <Heading>Invoicing</Heading>
-            <Para>
-              Aiyyna offers an invoicing feature that enables users to create, manage and send invoices to their
-              customers seamlessly. This feature helps streamline the invoicing process, which saves time and reduces
-              errors.
-            </Para>
+            <Heading>{props.title}</Heading>
+            <Para>{props.description}</Para>
           </Description>
         </CardDescription>
       </Card>

@@ -2,11 +2,12 @@
 import React from 'react';
 import { Main, Content, Description, Leftcontent, Rightcontent, Title, Row1, Row2 } from './styles';
 import Iconbox from './Box';
+import { Container } from '@/app/styles/commoncontainer';
 
 export default function Integrations() {
   return (
-    <div>
-      <Main>
+    <Main>
+      <Container>
         <Content>
           <Leftcontent>
             <Title>Integrations</Title>
@@ -14,6 +15,7 @@ export default function Integrations() {
               200+ Integrations <br></br> to help your business grow
             </Description>
           </Leftcontent>
+          <div className='abc'>
           <Rightcontent>
             <Row1>
               <Iconbox imgsrc='/images/ebay.svg' height={26} width={66} />
@@ -35,9 +37,11 @@ export default function Integrations() {
               <Iconbox imgsrc='/images/blibli.svg' height={26} width={79} />
               <Iconbox imgsrc='/images/fynd.svg' height={26} width={65} />
             </Row1>
-          </Rightcontent>
+            </Rightcontent>
+            
+            </div>
         </Content>
-      </Main>
-    </div>
+      </Container>
+    </Main>
   );
 }

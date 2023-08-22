@@ -6,15 +6,13 @@ import Button from '../button/button';
 
 export default function FooterCTA() {
   return (
-    <div>
-      <Main>
-        <Container>
-          <Content>
-            <Description>Drop us a line or two, we are open for creative minds and collaborations!</Description>
-            <Button title='Contact Us' />
-          </Content>
-        </Container>
-      </Main>
-    </div>
+    <Main>
+      <Container>
+        <Content>
+          <Description>Drop us a line or two, we are open for creative minds and collaborations!</Description>
+          <Button title='Contact Us' />
+        </Content>
+      </Container>
+    </Main>
   );
 }
