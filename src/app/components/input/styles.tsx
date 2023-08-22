@@ -7,7 +7,6 @@ interface Props {
 }
 const Maindiv = styled.div<Props>`
   position: relative;
-  padding: 500px 500px;
 `;
 
 const Inputbox = styled.input<Props>`
@@ -33,7 +32,7 @@ const Inputbox = styled.input<Props>`
 
   padding: 8px 12px;
   display: inline-block;
-  border: 1px solid #DFE5F1;
+  border: 1px solid #dfe5f1;
   width: 100%;
   outline: 0px;
   background: #fff;
