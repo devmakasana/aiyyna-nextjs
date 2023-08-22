@@ -4,13 +4,17 @@ import React from 'react';
 import { Main, Content, Description } from './styles';
 import Button from '../button/button';
 
-export default function FooterCTA() {
+interface props {
+  description: string;
+  title: string;
+}
+export default function FooterCTA(props: props) {
   return (
     <Main>
       <Container>
         <Content>
-          <Description>Drop us a line or two, we are open for creative minds and collaborations!</Description>
-          <Button title='Contact Us' />
+          <Description>{props.description}</Description>
+          <Button title={props.title} />
         </Content>
       </Container>
     </Main>
