@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Main, Content, Logo, Right, Rightfooter, Last } from './styles';
 import { Container } from '@/app/styles/commoncontainer';
-import logo from '../../../public/images/footerlogo.svg';
+import logo from '../../../../public/images/footerlogo.svg';
 
 export default function Footer() {
   return (

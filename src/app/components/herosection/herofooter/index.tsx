@@ -1,6 +1,6 @@
 import React from 'react';
 import { Content, Icons, Maindiv, Title } from './styles';
-import SVGIcon from '../../../../public/assets/svg/SVGIcon';
+import SVGIcon from '../../../../../public/assets/svg/SVGIcon';
 import Image from 'next/image';
 
 export default function Herofooter() {

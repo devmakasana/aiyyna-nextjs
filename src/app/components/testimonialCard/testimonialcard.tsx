@@ -1,12 +1,12 @@
 import React from 'react';
 import { Main, Box, Leftarrow, Rightarrow, Arrow } from './styles';
-import profile from '../../../public/images/testimoniallogo.png';
+import profile from '../../../../public/images/testimoniallogo.png';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SliderCard from '../sliderCard/sliderCard';
 
-import SVGIcon from '../../../public/assets/svg/SVGIcon';
+import SVGIcon from '../../../../public/assets/svg/SVGIcon';
 
 export default function TestimonialCard() {
   const settings = {
