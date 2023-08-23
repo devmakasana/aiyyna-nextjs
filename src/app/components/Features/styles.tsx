@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Heading2, SmallText } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 const Content = styled.div`
   display: flex;
@@ -6,10 +8,10 @@ const Content = styled.div`
   align-items: center;
   justify-content: center;
   padding-top: 91px;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
   @media screen and (max-width: 767px) {
     padding-top: 80px;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
   }
 `;
 const Topcontent = styled.div`
@@ -26,16 +28,14 @@ const Bottomcontent = styled.div`
   gap: 30px;
 `;
 const Title = styled.div`
-  color: #635bff;
-  font-size: 14px;
-  font-weight: 600;
+  color: ${colors.primary};
+  ${SmallText};
   letter-spacing: 1px;
   text-transform: uppercase;
 `;
 const Subtitle = styled.div`
-  color: #1c132d;
-  font-size: 36px;
-  font-weight: 600;
+  color: ${colors.title};
+  ${Heading2}
 
   text-align: center;
   @media screen and (max-width: 767px) {

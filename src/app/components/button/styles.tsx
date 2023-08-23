@@ -1,3 +1,5 @@
+import { ButtonText } from '@/app/styles/fontstyle';
+import ButtonGroup from 'antd/es/button/button-group';
 import styled, { css, keyframes } from 'styled-components';
 
 interface WrapButton {
@@ -19,11 +21,7 @@ const Buttons = styled.button<WrapButton>`
   white-space: nowrap;
   border: none;
   a {
-    font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
-    font-style: normal;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
+    ${ButtonText};
   }
   &:hover {
     background: #3d34ef;
@@ -44,7 +42,7 @@ const Buttons = styled.button<WrapButton>`
         border: none;
       }
     `}
-    ${(props) =>
+  ${(props) =>
     props.width &&
     css`
       width: ${props.width}px;

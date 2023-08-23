@@ -31,31 +31,31 @@ const Heading5 = css`
   line-height: 23px;
 `;
 const Body1 = css`
-  font-family: '__Inter_20951f';
+  font-family: 'Inter', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 170%;
 `;
 const Body2 = css`
-  font-family: '__Inter_20951f';
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
 `;
 const ButtonText = css`
-  font-family: '__Inter_20951f';
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
 `;
 const InputTitle = css`
-  font-family: '__Inter_20951f';
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 17px;
 `;
 const SmallText = css`
-  font-family: '__Inter_20951f';
+  font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 600;
   line-height: 17px;
