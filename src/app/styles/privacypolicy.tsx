@@ -17,7 +17,7 @@ const Title = styled.div`
 `;
 
 const Heading = styled.div`
-  padding: 80px 0 64px;
+  padding: 80px 0 40px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
