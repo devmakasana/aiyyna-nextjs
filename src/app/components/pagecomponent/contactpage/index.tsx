@@ -9,8 +9,8 @@ export default function Contactpage() {
     <Group>
       <Hero>
         <Header />
+        <Contactsection />
       </Hero>
-      <Contactsection />
       <FooterCTA description={'Let’s simplify & automate your marketing campaigns'} title={'Book A Demo'} />
       <Footer />
     </Group>

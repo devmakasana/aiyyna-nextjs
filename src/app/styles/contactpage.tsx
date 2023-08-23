@@ -5,7 +5,7 @@ const Group = styled.div`
   max-width: 100%;
 `;
 const Hero = styled.div`
-  background-image: url('maskbg.png');
+  background-image: url('contactmaskbg.png');
   background-position: 50%;
   background-size: cover;
 `;
