@@ -7,6 +7,7 @@ const Main = styled.div`
   background-size: cover;
   background-position: center;
   max-width: 100%;
+  margin-top: 120px;
 `;
 
 const Content = styled.div`

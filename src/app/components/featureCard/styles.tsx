@@ -1,13 +1,16 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { Body2, Heading4 } from '@/app/styles/fontstyle';
+import { colors } from '@/app/styles/colors';
 const Card = styled(Link)`
   border-radius: 12px;
   border: 1px solid #dfe5f1;
   display: flex;
   flex-direction: column;
-  width: 412px;
-  max-width: 100%;
+  max-width: 412px;
+  width: 100%;
   transition: all 0.3s;
+  text-decoration: none;
   &:hover {
     box-shadow: 4px 4px 40px 0px rgba(102, 94, 154, 0.12);
   }
@@ -16,6 +19,7 @@ const Card = styled(Link)`
 const CardImage = styled.div`
   .card-image {
     max-width: 100%;
+    height: 100%;
   }
 `;
 
@@ -30,18 +34,13 @@ const Description = styled.div`
   gap: 10px;
 `;
 const Heading = styled.div`
-  color: #1c132d;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  color: ${colors.title};
+  ${Heading4};
+  font-family: 'Euclid Circular B Medium';
 `;
 const Para = styled.div`
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
-  color: #5a5a6c;
+  ${Body2};
+  color: ${colors.body};
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
