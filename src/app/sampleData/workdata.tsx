@@ -217,3 +217,45 @@ export const RefundpolicyData: any = {
     }
   ]
 };
+export const AgreementData: any = {
+  nodeType: 'document',
+  data: {},
+  content: [
+    {
+      "nodeType": "paragraph",
+      "data": {},
+      "content": [
+        {
+          "nodeType": "text",
+          "value": "This Agreement comprises of the accompanying terms and conditions (hereinafter the \"General Terms\") and terms and conditions, assuming any, particular to utilisation of individual Services (hereinafter the \"Administration Specific Terms\"). The General Terms and Service Specific Terms are by and large alluded to as the \"Terms\". In case of a contention between the General Terms and Service Specific Terms, ",
+          "marks": [],
+          "data": {}
+        },
+        {
+          "nodeType": "hyperlink",
+          "data": {
+            "uri": "https://google.com"
+          },
+          "content": [
+            {
+              "nodeType": "text",
+              "value": "The Service Specific terms ",
+              "marks": [],
+              "data": {}
+            }
+          ]
+        },
+        {
+          "nodeType": "text",
+          "value": "might win.",
+          "marks": [],
+          "data": {}
+        }
+      ]
+    },
+  ]
+};
+
+
+
+
