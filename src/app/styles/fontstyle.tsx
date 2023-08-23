@@ -37,7 +37,7 @@ const Body1 = css`
   line-height: 170%;
 `;
 const Body2 = css`
-  font-family: 'Inter';
+  font-family: '__Inter_20951f';
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;

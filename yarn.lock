@@ -1196,6 +1196,18 @@
     "@babel/helper-validator-identifier" "^7.22.5"
     to-fast-properties "^2.0.0"
 
+"@contentful/rich-text-react-renderer@^15.17.1":
+  version "15.17.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-react-renderer/-/rich-text-react-renderer-15.17.1.tgz#e173746e58f505fe8dd5335abf1e9ebc58f7157f"
+  integrity sha512-LSsYBYYAzkSCWmAbbVCzxZhcrUNBWdgOo9YY1WgvANmzF9zEUODxml3lCLN7PQ08nGMAjzhJBV5wpyp5YReRjg==
+  dependencies:
+    "@contentful/rich-text-types" "^16.2.1"
+
+"@contentful/rich-text-types@^16.2.1":
+  version "16.2.1"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.2.1.tgz#27236f276f473500e0dd5e330a074a98fc2d223b"
+  integrity sha512-fBxqYcyG3Nw33DhifuE7Ndw3xlrWlOMjwsOvhLmVP4LO475Qyy9ioRChtEt6DPUdH2SFpobvM0qqC/fVe0MNDA==
+
 "@csstools/selector-specificity@^2.0.2":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@csstools/selector-specificity/-/selector-specificity-2.2.0.tgz#2cbcf822bf3764c9658c4d2e568bd0c0cb748016"
