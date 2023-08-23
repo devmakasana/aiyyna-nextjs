@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body2, Heading5 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 const Main = styled.div``;
 const Content = styled.div`
@@ -31,21 +33,14 @@ const Below = styled.div`
   padding-bottom: 75px;
 `;
 const Title = styled.div`
-  color: #1c132d;
+  color: ${colors.title};
+  ${Heading5}
   text-align: center;
-  font-family: 'Euclid Circular B SemiBold';
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
 `;
 const Description = styled.div`
-  color: #5a5a6c;
+  color: ${colors.body};
+  ${Body2}
   text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
 `;
 
 export { Main, Content, Subcontent, Below, Title, Description, Logo };

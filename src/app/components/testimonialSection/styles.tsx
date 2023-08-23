@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Heading2, SmallText } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 
 const Main = styled.div`
@@ -10,22 +12,17 @@ const Content = styled.div`
   padding-top: 120px;
 `;
 const Heading = styled.div`
-  color: #635bff;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  color: ${colors.primary};
+  ${SmallText}
   letter-spacing: 1px;
+  text-align: center;
   text-transform: uppercase;
 `;
 const Subheading = styled.div`
-  color: #1c132d;
+  color: ${colors.title};
+  ${Heading2}
   text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+
   margin-top: 15px;
   @media (max-width: 991px) {
     font-size: 34px;

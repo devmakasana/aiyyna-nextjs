@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body1 } from '@/app/styles/fontstyle';
 import { styled } from 'styled-components';
 const Content = styled.div`
   padding-top: 35px;
@@ -22,10 +24,8 @@ const Maindiv = styled.div`
 `;
 
 const Title = styled.div`
-  color: #5a5a6c;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 170%;
+  color: ${colors.body};
+  ${Body1}
 `;
 const Icons = styled.div`
   display: flex;

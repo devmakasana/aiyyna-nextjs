@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body2 } from '@/app/styles/fontstyle';
 import styled, { css } from 'styled-components';
 
 interface Props {
@@ -37,13 +39,12 @@ const Inputbox = styled.input<Props>`
   outline: 0px;
   background: #fff;
   border-radius: 4px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 160%;
-  color: #393945;
+  color: ${colors.title};
+  ${Body2}
 
   &::placeholder {
-    color: #bab8c0;
+    color: ${colors.gray};
+
   }
   &[type='number'] {
     &::-webkit-inner-spin-button,

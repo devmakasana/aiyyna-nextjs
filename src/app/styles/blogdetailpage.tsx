@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Body2, Heading2 } from '@/app/styles/fontstyle';
+import { colors } from './colors';
 
 const Group = styled.div`
   background: #fff;
@@ -12,11 +13,12 @@ const Hero = styled.div`
   background-size: cover;
 `;
 const Title = styled.div`
-  color: #5a5a6c;
+ color: ${colors.body};
   ${Body2}
 `;
 const Description = styled.div`
-  color: #5a5a6c;
+  color: ${colors.title};
+
   ${Heading2}
   text-align: center;
 `;

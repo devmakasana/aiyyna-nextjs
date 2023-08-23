@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body2, Heading3 } from '@/app/styles/fontstyle';
 import { styled } from 'styled-components';
 const Maindiv = styled.div`
   display: flex;
@@ -20,9 +22,8 @@ const Rightdiv = styled.div`
   justify-content: center;
 `;
 const Title = styled.div`
-  color: #1c132d;
-  font-size: 28px;
-  font-weight: 500;
+   color: ${colors.title};
+  ${Heading3}
 `;
 const Description = styled.div`
   display: flex;
@@ -30,10 +31,8 @@ const Description = styled.div`
   flex-direction: row;
   align-items: flex-start;
   justify-content: center;
-  color: #5a5a6c;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 160%;
+  color: ${colors.body};
+  ${Body2}
 `;
 
 const Points = styled.div`

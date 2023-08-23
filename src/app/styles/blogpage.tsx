@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Heading1 } from './fontstyle';
+import { colors } from './colors';
 const Group = styled.div`
   background: #fff;
   width: 100%;
@@ -11,9 +13,9 @@ const Hero = styled.div`
 `;
 const Title = styled.div`
   padding: 80px 0;
-  color: #1c132d;
+  color: ${colors.title};
+  ${Heading1}
   text-align: center;
-  font-size: 58px;
-  font-weight: 600;
+ 
 `;
 export { Group, Hero, Title };

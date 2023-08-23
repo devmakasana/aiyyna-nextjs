@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { Body2 } from '@/app/styles/fontstyle';
+import { colors } from '@/app/styles/colors';
 
 const Main = styled.div`
   background: #1c132d;
@@ -16,10 +18,8 @@ const Logo = styled(Link)`
 const Right = styled.div`
   display: flex;
   gap: 60px;
-  color: #bab8c0;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
+  color: ${colors.gray};
+  ${Body2}
 `;
 const Rightfooter = styled(Link)`
   transition: all 0.3s;

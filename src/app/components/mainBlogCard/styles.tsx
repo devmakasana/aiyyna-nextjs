@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body1, Heading2 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 
 const Main = styled.div``;
@@ -23,26 +25,18 @@ const Right = styled.div`
   width: 50%;
 `;
 const Datetiltle = styled.div`
-  color: #5a5a6c;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 170%;
+  color: ${colors.body};
+  ${Body1}
 `;
 const Heading = styled.div`
-  color: #1c132d;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
+  color: ${colors.title};
+  ${Heading2}
   margin-top: 14px;
 `;
 const Description = styled.div`
   color: #5a5a6c;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 170%;
+  color: ${colors.body};
+  ${Body1}
   margin-top: 10px;
   margin-bottom: 30px;
 `;

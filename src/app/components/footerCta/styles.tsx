@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Heading2 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 
 const Main = styled.div`
@@ -20,12 +22,9 @@ const Content = styled.div`
 `;
 
 const Description = styled.div`
-  color: #1c132d;
+  color: ${colors.title};
+  ${Heading2}
   text-align: center;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
   max-width: 800px;
   width: 100%;
 `;

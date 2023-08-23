@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body1, Heading1, Heading5 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 const Main = styled.div`
   width: 100%;
@@ -44,23 +46,17 @@ const Logo = styled.div`
   height: 60px;
 `;
 const Description = styled.p`
-  font-size: 18px;
   margin-top: 10px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 170%;
-  color: #1c132d;
+  color: ${colors.title};
+  ${Body1}
 `;
 const Title = styled.div`
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  color: #1c132d;
+  color: ${colors.title};
+  ${Heading5}
   margin-top: 24px;
 `;
 const Heading = styled.div`
-  color: #5a5a6c;
+  color: ${colors.body};
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -68,7 +64,7 @@ const Heading = styled.div`
   margin-top: 6px;
 `;
 const Subheading = styled.div`
-  color: #5a5a6c;
+  color: ${colors.body};
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
