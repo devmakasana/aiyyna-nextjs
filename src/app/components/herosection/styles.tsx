@@ -1,3 +1,4 @@
+import { colors } from '@/app/styles/colors';
 import { styled } from 'styled-components';
 const Maindiv = styled.div`
   display: flex;
@@ -85,9 +86,9 @@ const Leftcontent = styled.div`
 `;
 const Rightcontent = styled.div``;
 const Title = styled.div`
-  color: #1c132d;
   font-size: 58px;
   font-weight: 600;
+  color: ${colors.title};
 `;
 const Description = styled.div`
   color: #5a5a6c;
