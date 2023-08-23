@@ -1,7 +1,9 @@
 import { styled } from 'styled-components';
 const Content = styled.div`
   padding-top: 35px;
-  padding-bottom: 29px;
+  position: relative;
+  z-index: 1;
+  /* padding-bottom: 29px; */
   margin: 0 auto;
   @media screen and (max-width: 767px) {
     padding-top: 0;
