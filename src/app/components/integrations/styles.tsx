@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Heading2, SmallText } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 
 const Main = styled.div`
@@ -28,17 +30,14 @@ const Content = styled.div`
   }
 `;
 const Title = styled.div`
-  color: #635bff;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 1px;
+   color: ${colors.primary};
+  ${SmallText}
   text-transform: uppercase;
 `;
 
 const Description = styled.div`
-  color: #1c132d;
-  font-size: 36px;
-  font-weight: 600;
+   color: ${colors.title};
+  ${Heading2}
 `;
 
 const Leftcontent = styled.div`

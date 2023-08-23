@@ -1,3 +1,4 @@
+import { colors } from '@/app/styles/colors';
 import { ButtonText } from '@/app/styles/fontstyle';
 import ButtonGroup from 'antd/es/button/button-group';
 import styled, { css, keyframes } from 'styled-components';
@@ -15,7 +16,7 @@ const Buttons = styled.button<WrapButton>`
   border-radius: 40px;
   padding: 12px 26px;
   background-color: #635bff;
-  color: #ffffff;
+  color: ${colors.white};
   cursor: pointer;
   width: inherit;
   white-space: nowrap;
@@ -29,12 +30,12 @@ const Buttons = styled.button<WrapButton>`
   ${(props) =>
     props.secondary &&
     css`
-      color: #1c132d;
+       color: ${colors.title};
       background-color: rgba(0, 0, 0, 0);
       border: none;
       a {
         &:hover {
-          color: #635bff;
+          color: ${colors.primary};
         }
       }
       &:hover {

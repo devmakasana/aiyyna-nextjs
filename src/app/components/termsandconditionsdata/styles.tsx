@@ -15,11 +15,12 @@ const Maindiv = styled.div`
   }
   a {
     ${Body2}
-    color: #635BFF;
+    color:${colors.primary};
     text-decoration-line: underline;
   }
   h4 {
     ${Heading4}
+    color:${colors.title};
     padding-top: 20px;
   }
   ol {

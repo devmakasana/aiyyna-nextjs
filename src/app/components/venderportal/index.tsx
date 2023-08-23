@@ -13,7 +13,7 @@ export default function Venderportal() {
         <Rightdiv>
           <Title>Vender Portal</Title>
           <Description>
-            Vitae sed nisi risus donec donec consequat ac. Tellus ut ut ac sit semper ut. Ornare.
+            Vitae sed nisi risus donec donec consequat ac. Tellus ut ut ac sit semper ut. <br></br>Ornare.
           </Description>
           <Description>
             Bad refund policies are infuriating. You feel like the company is just trying to rip you off. We never want

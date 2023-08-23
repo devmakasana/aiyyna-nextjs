@@ -1,4 +1,5 @@
 import { colors } from '@/app/styles/colors';
+import { Body1, Heading1 } from '@/app/styles/fontstyle';
 import { styled } from 'styled-components';
 const Maindiv = styled.div`
   display: flex;
@@ -86,16 +87,13 @@ const Leftcontent = styled.div`
 `;
 const Rightcontent = styled.div``;
 const Title = styled.div`
-  font-size: 58px;
-  font-weight: 600;
+  ${Heading1}
   color: ${colors.title};
 `;
 const Description = styled.div`
   color: #5a5a6c;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 170%;
+  ${Body1}
+  color: ${colors.body};
 `;
 const Top = styled.div`
   display: flex;

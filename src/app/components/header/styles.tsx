@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { ButtonText } from '@/app/styles/fontstyle';
 import styled, { css } from 'styled-components';
 interface Props {
   isOpenMobileMenu?: any;
@@ -59,16 +61,13 @@ const Links = styled.div`
   padding: 2px 20px 2px 0;
   border-right: 1px solid#BAB8C0;
   .link {
-    color: #1c132d;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20px;
+    color: ${colors.title};
+    ${ButtonText}
   }
   @media (max-width: 991px) {
     width: 100%;
     flex-direction: column;
     border: none;
-    /* padding: 0; */
     gap: 24px;
   }
 `;

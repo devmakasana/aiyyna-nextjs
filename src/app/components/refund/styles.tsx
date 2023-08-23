@@ -1,9 +1,10 @@
+import { colors } from '@/app/styles/colors';
 import { Body2, Heading3, Heading4 } from '@/app/styles/fontstyle';
 import { styled } from 'styled-components';
 const Maindiv = styled.div`
 padding-bottom: 50px;
   h3 {
-    color: #1c132d;
+    color: ${colors.title};
     ${Heading3}
     padding-bottom: 16px;
   }
@@ -17,6 +18,8 @@ padding-bottom: 50px;
 
   p {
     ${Body2}
+    color: ${colors.body};
+
   }
   ul {
     display: flex;
@@ -26,6 +29,8 @@ padding-bottom: 50px;
   }
   h4 {
     ${Heading4}
+    color: ${colors.title};
+
     padding: 20px 0 16px 0;
   }
 `;

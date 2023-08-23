@@ -5,5 +5,6 @@ export const colors = {
   white: '#FFFFFF',
   border: '#DFE5F1',
   gray: '#BAB8C0',
-  bg: '#FBFBFF'
+  bg: '#FBFBFF',
+  red:' #ff5b60',
 };

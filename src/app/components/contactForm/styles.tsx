@@ -1,3 +1,5 @@
+import { colors } from '@/app/styles/colors';
+import { Body2, InputTitle } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 const Main = styled.div`
   width: 100%;
@@ -19,13 +21,10 @@ const Form = styled.div`
 `;
 
 const Label = styled.div`
-  color: #5a5a6c;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  color: ${colors.body};
+  ${InputTitle}
   span {
-    color: #ff5b60;
+    color: ${colors.red};
   }
 `;
 const First = styled.div`
@@ -51,16 +50,13 @@ const Textarea = styled.textarea`
   outline: 0px;
   background: #fff;
   border-radius: 4px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 160%;
-  color: #393945;
-  font-family: '__Inter_20951f', '__Inter_Fallback_20951f';
+  color: ${colors.title};
+  ${Body2}
   height: 139px;
   resize: none;
 
   &::placeholder {
-    color: #bab8c0;
+    color: ${colors.gray};
   }
   &:focus-visible {
     border: 1px solid #635bff;

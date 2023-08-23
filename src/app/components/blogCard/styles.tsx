@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import Link from 'next/link';
+import { Body2, Heading4 } from '@/app/styles/fontstyle';
+import { colors } from '@/app/styles/colors';
 
 const Content = styled(Link)`
   display: flex;
@@ -30,19 +32,14 @@ const Below = styled.div`
   border-radius: 0 0 10px 10px;
 `;
 const Datetitle = styled.div`
-  color: #5a5a6c;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 160%;
+  color: ${colors.body};
+  ${Body2}
 `;
 
 const Description = styled.div`
-  color: #1c132d;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+ 
+  ${Heading4}
+  color: ${colors.title};
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
