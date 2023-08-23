@@ -7,7 +7,7 @@ const Content = styled.div`
   gap: 50px;
   align-items: center;
   justify-content: center;
-  padding-top: 91px;
+  padding-top: 120px;
   /* padding-bottom: 120px; */
   @media screen and (max-width: 767px) {
     padding-top: 80px;
