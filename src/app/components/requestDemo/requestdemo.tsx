@@ -3,6 +3,7 @@ import React from 'react';
 import { Content, Heading, Description, Subcontent, Form, Main } from './styles';
 import Requestform from '../requestForm/requestform';
 import Image from 'next/image';
+import Requestsuccess from '../requestSuccess/requestsuccess';
 
 export default function Requestdemo() {
   return (
@@ -18,6 +19,8 @@ export default function Requestdemo() {
             </Subcontent>
             <Form>
               <Requestform />
+              {/* Request demo thanku you card */}
+              {/* <Requestsuccess /> */}
             </Form>
           </Content>
           <div className='image-purple'>
