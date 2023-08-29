@@ -107,3 +107,8 @@ a {
   background-position: 50%;
   background-size: cover;
 }
+.contacthero {
+  background-image: url('../../public/contactmaskbg.png');
+  background-position: 50%;
+  background-size: cover;
+}
