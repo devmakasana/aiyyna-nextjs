@@ -10,7 +10,7 @@ export default async function Layout({
   return (
     <>
       <div>
-        <Header />
+        {/* <Header /> */}
         <main>{children}</main>
         <FooterCTA CTAtitle={CTAtitle} CTAbtntext={CTAbtntext} />
         <Footer />

@@ -1,9 +1,14 @@
-import Layout from "@/app/components/layout";
+import Layout from '@/app/components/layout';
+import TermsandConditionsPage from '../components/pagecomponent/termsandconditionspage';
+import Header from '../components/header/header';
 
 export default function TremsCondition() {
-    return (
-        <Layout>
-            <div>Terms & Condition page</div>
-        </Layout>
-    );
+  return (
+    <Layout>
+ 
+        {/* <Header /> */}
+        <TermsandConditionsPage />
+  
+    </Layout>
+  );
 }

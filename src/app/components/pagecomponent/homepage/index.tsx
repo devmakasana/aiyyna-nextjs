@@ -5,13 +5,15 @@ import Integrations from '@/app/components/integrations';
 import FooterCTA from '@/app/components/footerCta/footercta';
 import { Group, Hero } from '@/app/styles/homepage';
 import Testimonialsection from '@/app/components/testimonialSection/testimonialsection';
+import Header from '../../header/header';
 
 export default function Homepage() {
   return (
-    <Group>
-      <Hero>
+    <div className='group'>
+      <div className='homehero'>
+        <Header />
         <Herosection />
-      </Hero>
+      </div>
       <Features />
       <Integrations />
       <Testimonialsection />
@@ -19,6 +21,6 @@ export default function Homepage() {
         description={'Drop us a line or two, we are open for creative minds and collaborations!'}
         title={'Contact Us'}
       /> */}
-    </Group>
+    </div>
   );
 }

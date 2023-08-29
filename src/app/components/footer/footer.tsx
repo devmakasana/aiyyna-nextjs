@@ -11,11 +11,11 @@ export default function Footer() {
       <Main>
         <Container>
           <Content>
-            <Logo href={''}>
+            <Logo href={'/'}>
               <Image src={logo} alt={logo} width={124} height={36} />
             </Logo>
             <Right>
-              <Rightfooter href={''}>Terms & Conditions</Rightfooter>
+              <Rightfooter href={'/terms-conditions'}>Terms & Conditions</Rightfooter>
               <Last href={''}>Privacy Policy</Last>
             </Right>
           </Content>
