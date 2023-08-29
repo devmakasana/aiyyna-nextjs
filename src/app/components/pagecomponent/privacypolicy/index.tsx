@@ -1,26 +1,17 @@
 import React from 'react';
 import Header from '../../header/header';
-import FooterCTA from '../../footerCta/footercta';
-import Footer from '../../footer/footer';
 import Privacypolicydata from '../../privacypolicydata';
 import { Group, Heading, Hero, Title } from '@/app/styles/privacypolicy';
+import Privacypolicyhero from '../../privacypolicyHero/privacypolicyhero';
 
 export default function Privacypolicy() {
   return (
-    <Group>
-      <Hero>
+    <div className='group'>
+      <div className='hero'>
         <Header />
-        <Heading>
-          {' '}
-          <Title>Privacy Policy</Title>
-        </Heading>
-      </Hero>
+        <Privacypolicyhero />
+      </div>
       <Privacypolicydata />
-      {/* <FooterCTA
-        description={'Drop us a line or two, we are open for creative minds and collaborations!'}
-        title={'Contact Us'}
-      /> */}
-      <Footer />
-    </Group>
+    </div>
   );
 }

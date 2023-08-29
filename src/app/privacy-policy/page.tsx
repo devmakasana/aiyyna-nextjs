@@ -1,9 +1,10 @@
-import Layout from "@/app/components/layout";
+import Layout from '@/app/components/layout';
+import Privacypolicy from '../components/pagecomponent/privacypolicy';
 
 export default function PrivacyPolicy() {
-    return (
-        <Layout>
-            <div>Privacy Policy page</div>
-        </Layout>
-    );
+  return (
+    <Layout>
+      <Privacypolicy />
+    </Layout>
+  );
 }
