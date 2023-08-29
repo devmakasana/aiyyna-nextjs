@@ -3,7 +3,7 @@ import { Heading2 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 
 const Main = styled.div`
-  background-image: url('footercta-background.svg');
+  background-image: url('../../footercta-background.svg');
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
