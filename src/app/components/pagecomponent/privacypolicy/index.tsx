@@ -16,10 +16,10 @@ export default function Privacypolicy() {
         </Heading>
       </Hero>
       <Privacypolicydata />
-      <FooterCTA
+      {/* <FooterCTA
         description={'Drop us a line or two, we are open for creative minds and collaborations!'}
         title={'Contact Us'}
-      />
+      /> */}
       <Footer />
     </Group>
   );

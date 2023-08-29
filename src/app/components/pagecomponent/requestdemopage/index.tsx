@@ -9,10 +9,10 @@ export default function Requestdemopage() {
     <div>
       <RequestHero />
       <Requestfeature />
-      <FooterCTA
+      {/* <FooterCTA
         description={'Drop us a line or two, we are open for creative minds and collaborations!'}
         title={'Contact Us'}
-      />
+      /> */}
       <Footer />
     </div>
   );
