@@ -12,7 +12,7 @@ export default function Homepage() {
   return (
     <Group>
       <Hero>
-        <Header />
+        {/* <Header /> */}
         <Herosection />
       </Hero>
       <Features />
@@ -22,7 +22,7 @@ export default function Homepage() {
         description={'Drop us a line or two, we are open for creative minds and collaborations!'}
         title={'Contact Us'}
       />
-      <Footer />
+      {/* <Footer /> */}
     </Group>
   );
 }
