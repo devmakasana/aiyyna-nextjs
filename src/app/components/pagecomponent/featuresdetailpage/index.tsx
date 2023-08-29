@@ -1,5 +1,5 @@
+'use client';
 import React from 'react';
-
 import Header from '../../header/header';
 import { Description, Group, Heading, Hero, Title } from '@/app/styles/featuresdetailpage';
 import FooterCTA from '../../footerCta/footercta';
@@ -11,7 +11,7 @@ import Refund from '../../refund';
 export default function Featuredetailpage() {
   return (
     <div>
-      <Group>
+      <div className='group'>
         <Hero>
           <Header />
           <Heading>
@@ -27,12 +27,7 @@ export default function Featuredetailpage() {
         <Venderportal />
         <Inventory />
         <Refund />
-        {/* <FooterCTA
-          description={'Drop us a line or two, we are open for creative minds and collaborations!'}
-          title={'Contact Us'}
-        /> */}
-        <Footer />
-      </Group>
+      </div>
     </div>
   );
 }

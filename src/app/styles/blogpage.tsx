@@ -16,6 +16,5 @@ const Title = styled.div`
   color: ${colors.title};
   ${Heading1}
   text-align: center;
- 
 `;
 export { Group, Hero, Title };

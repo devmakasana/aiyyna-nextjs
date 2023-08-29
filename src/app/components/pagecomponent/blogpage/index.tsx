@@ -5,13 +5,15 @@ import Footer from '@/app/components/footer/footer';
 import Header from '../../header/header';
 import Mainblogcard from '../../mainBlogCard/mainblogcard';
 import Blogallcard from '../../blogAll/blogallcard';
+import Bloghero from '../../blogHero/bloghero';
 export default function Blogpage() {
   return (
-    <Group>
-      <Hero>
+    <div className='group'>
+      <div className='hero'>
         <Header />
-        <Title>Blog</Title>
-      </Hero>
+        {/* <Title>Blog</Title> */}
+        <Bloghero />
+      </div>
       <Mainblogcard
         imgSrc={'/images/mainblog.png'}
         width={623}
@@ -23,11 +25,6 @@ export default function Blogpage() {
         }
       />
       <Blogallcard />
-      {/* <FooterCTA
-        description={'Drop us a line or two, we are open for creative minds and collaborations!'}
-        title={'Contact Us'}
-      /> */}
-      <Footer />
-    </Group>
+    </div>
   );
 }
