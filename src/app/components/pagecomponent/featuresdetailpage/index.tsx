@@ -27,10 +27,10 @@ export default function Featuredetailpage() {
         <Venderportal />
         <Inventory />
         <Refund />
-        <FooterCTA
+        {/* <FooterCTA
           description={'Drop us a line or two, we are open for creative minds and collaborations!'}
           title={'Contact Us'}
-        />
+        /> */}
         <Footer />
       </Group>
     </div>

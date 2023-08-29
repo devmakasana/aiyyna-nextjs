@@ -5,16 +5,16 @@ import { Main, Content, Description } from './styles';
 import Button from '../button/button';
 
 interface props {
-  description: string;
-  title: string;
+  CTAtitle: string;
+  CTAbtntext: string;
 }
 export default function FooterCTA(props: props) {
   return (
     <Main>
       <Container>
         <Content>
-          <Description>{props.description}</Description>
-          <Button title={props.title} />
+          <Description>{props.CTAtitle}</Description>
+          <Button title={props.CTAbtntext} />
         </Content>
       </Container>
     </Main>
