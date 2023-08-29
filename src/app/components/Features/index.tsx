@@ -1,3 +1,4 @@
+'use client';
 import { Container } from '@/app/styles/commoncontainer';
 import React from 'react';
 import { Bottomcontent, Content, Subtitle, Title, Topcontent } from './styles';

@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Description, Images, Leftcontent, Maindiv, Rightcontent, Title, Top } from './styles';
 import Button from '../button/button';

@@ -4,23 +4,16 @@ import { Group, Heading, Hero, Title } from '@/app/styles/termsandConditions';
 import FooterCTA from '../../footerCta/footercta';
 import Termsandconditionsdata from '../../termsandconditionsdata';
 import Footer from '../../footer/footer';
+import Termsconditionhero from '../../termsconditionshero/termsconditionhero';
 
-export default function TermsandConditions() {
+export default function TermsandConditionsPage() {
   return (
-    <Group>
-      <Hero>
+    <div className='group'>
+      <div className='termsconditionshero'>
         <Header />
-        <Heading>
-          {' '}
-          <Title>Terms & Conditions </Title>
-        </Heading>
-      </Hero>
+        <Termsconditionhero />
+      </div>
       <Termsandconditionsdata />
-      {/* <FooterCTA
-        description={'Drop us a line or two, we are open for creative minds and collaborations!'}
-        title={'Contact Us'}
-      /> */}
-      <Footer />
-    </Group>
+    </div>
   );
 }
