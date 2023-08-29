@@ -102,3 +102,8 @@ a {
   background-position: 50%;
   background-size: cover;
 }
+.hero {
+  background-image: url('../../public/maskbg.png');
+  background-position: 50%;
+  background-size: cover;
+}
