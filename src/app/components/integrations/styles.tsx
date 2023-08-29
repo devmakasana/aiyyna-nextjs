@@ -10,6 +10,9 @@ const Main = styled.div`
   background-position: center;
   max-width: 100%;
   margin-top: 120px;
+  @media (max-width: 449px) {
+    margin-top: 60px;
+  }
 `;
 
 const Content = styled.div`
@@ -30,13 +33,13 @@ const Content = styled.div`
   }
 `;
 const Title = styled.div`
-   color: ${colors.primary};
+  color: ${colors.primary};
   ${SmallText}
   text-transform: uppercase;
 `;
 
 const Description = styled.div`
-   color: ${colors.title};
+  color: ${colors.title};
   ${Heading2}
 `;
 

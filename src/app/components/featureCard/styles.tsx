@@ -32,6 +32,10 @@ const Description = styled.div`
   flex-direction: column;
   padding: 25px 30px;
   gap: 10px;
+  @media (max-width: 449px) {
+    padding: 20px 24px;
+    gap: 8px;
+  }
 `;
 const Heading = styled.div`
   color: ${colors.title};
