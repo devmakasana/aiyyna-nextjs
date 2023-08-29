@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Group, Hero, Title } from '@/app/styles/blogpage';
 import FooterCTA from '@/app/components/footerCta/footercta';
@@ -7,11 +8,11 @@ import Mainblogcard from '../../mainBlogCard/mainblogcard';
 import Blogallcard from '../../blogAll/blogallcard';
 export default function Blogpage() {
   return (
-    <Group>
-      <Hero>
+    <div className='group'>
+      <div className='hero'>
         <Header />
         <Title>Blog</Title>
-      </Hero>
+      </div>
       <Mainblogcard
         imgSrc={'/images/mainblog.png'}
         width={623}
@@ -23,11 +24,6 @@ export default function Blogpage() {
         }
       />
       <Blogallcard />
-      {/* <FooterCTA
-        description={'Drop us a line or two, we are open for creative minds and collaborations!'}
-        title={'Contact Us'}
-      /> */}
-      <Footer />
-    </Group>
+    </div>
   );
 }
