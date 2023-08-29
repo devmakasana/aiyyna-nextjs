@@ -9,7 +9,6 @@ export default function Refund() {
       <Container>
         <Maindiv>{documentToReactComponents(RefundpolicyData)}</Maindiv>
       </Container>
-      ;
     </>
   );
 }
