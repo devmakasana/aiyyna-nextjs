@@ -1,11 +1,11 @@
 'use client';
 import Homepage from '@/app/components/pagecomponent/homepage';
-import styles from './page.module.css';
+import Layout from './components/layout';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <Layout>
       <Homepage />
-    </main>
+    </Layout>
   );
 }
