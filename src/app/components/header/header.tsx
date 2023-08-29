@@ -1,3 +1,4 @@
+'use client'
 import React, { useCallback, useMemo, useState } from 'react';
 import {
   Bottomcontent,
@@ -23,7 +24,7 @@ import { Container } from '@/app/styles/commoncontainer';
 import SVGIcon from '../../../../public/assets/svg/SVGIcon';
 import { Dropdown } from 'antd';
 
-interface Props {}
+interface Props { }
 
 const Header: React.FC<Props> = (Props) => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
