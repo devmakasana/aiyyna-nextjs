@@ -6,6 +6,7 @@ import Header from '../../header/header';
 import Mainblogcard from '../../mainBlogCard/mainblogcard';
 import Blogallcard from '../../blogAll/blogallcard';
 import Bloghero from '../../blogHero/bloghero';
+import Blogbutton from '../../blogButton/blogbutton';
 export default function Blogpage() {
   return (
     <div className='group'>
@@ -25,6 +26,7 @@ export default function Blogpage() {
         }
       />
       <Blogallcard />
+      <Blogbutton />
     </div>
   );
 }
