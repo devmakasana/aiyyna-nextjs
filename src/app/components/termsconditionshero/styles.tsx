@@ -3,7 +3,7 @@ import { colors } from '@/app/styles/colors';
 import { Heading1 } from '@/app/styles/fontstyle';
 
 const Heading = styled.div`
-  padding: 80px 0 64px;
+  padding: 154px 0 64px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

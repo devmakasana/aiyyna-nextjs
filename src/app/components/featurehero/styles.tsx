@@ -19,7 +19,7 @@ const Description = styled.div`
 `;
 const Heading = styled.div`
   width: 900px;
-  padding: 80px 0;
+  padding: 154px 0 80px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

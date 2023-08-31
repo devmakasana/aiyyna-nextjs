@@ -6,7 +6,7 @@ const Maindiv = styled.div`
   flex-direction: row;
   gap: 80px;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 154px;
   padding-bottom: 44px;
   @media screen and (max-width: 991px) {
     width: auto;

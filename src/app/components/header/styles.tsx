@@ -14,14 +14,26 @@ const Container = styled.div`
   padding: 0 72px;
 `;
 
-const MainHeader = styled.div`
-  position: relative;
-  z-index: 99;
+const MainHeader = styled.div<Props>`
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  margin: 0 auto;
+  transition: all 0.4s;
   background-color: rgba(0, 0, 0, 0);
   padding-top: 30px;
   @media (max-width: 991px) {
     padding-top: 20px;
   }
+  ${(props) =>
+    props.isScrollPage &&
+    css`
+      padding: 16px 0;
+      background: rgba(255, 255, 255, 0.65);
+      box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.06);
+      backdrop-filter: blur(20px);
+    `};
 `;
 const Maindiv = styled.div`
   display: flex;
