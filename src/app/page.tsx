@@ -1,4 +1,4 @@
-import Homepage from '@/app/components/pagecomponent/homepage';
+import Homepage from '@/app/components/pagecomponent/home/homePage';
 import Layout from './components/layout';
 
 export default function Home() {
