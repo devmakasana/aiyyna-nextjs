@@ -1,5 +1,5 @@
 import Layout from '@/app/components/layout';
-import TermsandConditionsPage from '../components/pagecomponent/termsandconditionspage';
+import TermsandConditionsPage from '../components/pagecomponent/termsAndConditions/termsAndConditionsPage';
 import Header from '../components/header/header';
 
 export default function TremsCondition() {
