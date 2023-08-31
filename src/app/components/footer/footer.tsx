@@ -12,7 +12,7 @@ export default function Footer() {
         <Container>
           <Content>
             <Logo href={'/'}>
-              <Image src={logo} alt={logo} width={124} height={36} />
+              <Image src={logo} alt={logo} width={124} height={36} className='logo-icon' />
             </Logo>
             <Right>
               <Rightfooter href={'/terms-conditions'}>Terms & Conditions</Rightfooter>
