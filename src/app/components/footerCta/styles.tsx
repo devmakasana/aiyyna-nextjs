@@ -1,7 +1,10 @@
 import { colors } from '@/app/styles/colors';
 import { Heading2 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
-
+const MainContent = styled.div`
+  background-image: url('../../whiteCta.png');
+  background-size: cover;
+`;
 const Main = styled.div`
   background-image: url('../../footercta-background.svg');
   width: 100%;
@@ -28,4 +31,4 @@ const Description = styled.div`
   max-width: 800px;
   width: 100%;
 `;
-export { Main, Content, Description };
+export { Main, Content, Description, MainContent };
