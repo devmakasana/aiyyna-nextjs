@@ -1,11 +1,11 @@
-'use client'
+'use client';
 
 import React from 'react';
 import { Description, Images, Leftcontent, Maindiv, Rightcontent, Title, Top } from './styles';
 import Button from '../button/button';
 import Image from 'next/image';
 import { Container } from '@/app/styles/commoncontainer';
-import Herofooter from './herofooter';
+import Herofooter from './herofooter/herofooter';
 
 export default function Herosection() {
   return (

@@ -1,5 +1,5 @@
-import Herosection from '@/app/components/herosection';
-import Features from '@/app/components/Features';
+import Herosection from '@/app/components/herosection/herosection';
+import Features from '@/app/components/Features/features';
 import Integrations from '@/app/components/integrations';
 import Testimonialsection from '@/app/components/testimonialSection/testimonialsection';
 import Header from '../../header/header';
