@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Description, Leftdiv, Maindiv, Rightdiv, Title } from './styles';
 import { Container } from '@/app/styles/commoncontainer';
