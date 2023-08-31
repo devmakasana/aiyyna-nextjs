@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Main, Content, Description, Leftcontent, Rightcontent, Title, Row1, Row2 } from './styles';
-import Iconbox from './Box';
+import Iconbox from './Box/box';
 import { Container } from '@/app/styles/commoncontainer';
 
 export default function Integrations() {
