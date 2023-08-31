@@ -1,7 +1,7 @@
 'use client';
 import { Container } from '@/app/styles/commoncontainer';
 import React from 'react';
-import { Main, Content, Description } from './styles';
+import { Main, Content, Description, MainContent } from './styles';
 import Button from '../button/button';
 
 interface props {
@@ -10,13 +10,17 @@ interface props {
 }
 export default function FooterCTA(props: props) {
   return (
-    <Main>
-      <Container>
-        <Content>
-          <Description>{props.CTAtitle}</Description>
-          <Button title={props.CTAbtntext} />
-        </Content>
-      </Container>
-    </Main>
+    <>
+      <Main>
+        <MainContent>
+          <Container>
+            <Content>
+              <Description>{props.CTAtitle}</Description>
+              <Button title={props.CTAbtntext} />
+            </Content>
+          </Container>
+        </MainContent>
+      </Main>
+    </>
   );
 }
