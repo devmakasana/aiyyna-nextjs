@@ -30,7 +30,7 @@ const Buttons = styled.button<WrapButton>`
   ${(props) =>
     props.secondary &&
     css`
-       color: ${colors.title};
+      color: ${colors.title};
       background-color: rgba(0, 0, 0, 0);
       border: none;
       a {

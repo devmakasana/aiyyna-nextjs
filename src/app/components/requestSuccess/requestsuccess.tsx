@@ -1,6 +1,7 @@
 import React from 'react';
 import { Main, Content, Above, Below, Description, Title, Heading } from './styles';
-import SVGIcon from '../../../../public/assets/svg/SVGIcon';
+import Image from 'next/image';
+import thankucard from '../../../../public/images/thanku-request.svg';
 
 export default function Requestsuccess() {
   return (
@@ -8,7 +9,7 @@ export default function Requestsuccess() {
       <Main>
         <Content>
           <Above>
-            <SVGIcon name='thankyou-image' width='198' height='198' viewBox='0 0 198 198' />
+            <Image src={thankucard} alt='thankucard' width={198} height={198} />
           </Above>
           <Below>
             <Description>
