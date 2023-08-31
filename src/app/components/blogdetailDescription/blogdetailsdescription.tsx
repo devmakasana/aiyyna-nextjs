@@ -2,7 +2,7 @@
 import React from 'react';
 
 import { Points } from './styles';
-import Agreement from '../agreement';
+import Agreement from '../agreement/agreement';
 import Refund from '../refund';
 
 export default function Blogdetailsdescription() {

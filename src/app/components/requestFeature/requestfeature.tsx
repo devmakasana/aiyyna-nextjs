@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Main, Below } from './styles';
-import Features from '../Features';
+import Features from '../Features/features';
 import Button from '../button/button';
 import { Container } from '@/app/styles/commoncontainer';
 
