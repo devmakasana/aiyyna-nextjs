@@ -25,7 +25,7 @@ const Description = styled.div`
 `;
 const Heading = styled.div`
   width: 980px;
-  padding-top: 80px;
+  padding-top: 154px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

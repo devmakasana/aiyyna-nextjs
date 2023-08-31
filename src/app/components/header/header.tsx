@@ -1,5 +1,5 @@
-'use client'
-import React, { useCallback, useMemo, useState } from 'react';
+'use client';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Bottomcontent,
   Dropbox,
@@ -23,8 +23,9 @@ import logo from '../../../../public/images/aiyynalogo.svg';
 import { Container } from '@/app/styles/commoncontainer';
 import SVGIcon from '../../../../public/assets/svg/SVGIcon';
 import { Dropdown } from 'antd';
+import router from 'next/router';
 
-interface Props { }
+interface Props {}
 
 const Header: React.FC<Props> = (Props) => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
@@ -32,9 +33,25 @@ const Header: React.FC<Props> = (Props) => {
     setIsOpenMobileMenu(!isOpenMobileMenu);
   }, [isOpenMobileMenu]);
 
+  let isScrollPage: boolean;
+  const [clientWindowHeight, setClientWindowHeight] = useState(0);
+  const handleScroll = () => {
+    setClientWindowHeight(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  });
+
+  if (clientWindowHeight > 10) {
+    isScrollPage = true;
+  } else {
+    isScrollPage = false;
+  }
   return (
     <>
-      <MainHeader>
+      <MainHeader isScrollPage={isScrollPage}>
         <Container>
           <Maindiv>
             <Logo>

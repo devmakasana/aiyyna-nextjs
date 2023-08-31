@@ -5,7 +5,7 @@ const Content = styled.div`
   gap: 120px;
   width: 100%;
   align-items: center;
-  padding-top: 80px;
+  padding-top: 154px;
   padding-bottom: 50px;
 `;
 

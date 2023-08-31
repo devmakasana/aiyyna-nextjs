@@ -9,7 +9,7 @@ const Content = styled.div`
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 80px;
+  padding-top: 154px;
   padding-bottom: 42px;
   position: relative;
   z-index: 1;
