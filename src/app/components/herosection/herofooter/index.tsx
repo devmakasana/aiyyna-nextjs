@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Content, Icons, Maindiv, Title } from './styles';
 import SVGIcon from '../../../../../public/assets/svg/SVGIcon';

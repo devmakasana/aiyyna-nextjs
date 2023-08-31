@@ -112,3 +112,8 @@ a {
   background-position: 50%;
   background-size: cover;
 }
+.request-main {
+  background-image: url('../../public/requestherogrid.png');
+  background-size: contain;
+  background-position: 50%;
+}

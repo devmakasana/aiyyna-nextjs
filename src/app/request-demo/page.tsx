@@ -1,9 +1,10 @@
-import Layout from "@/app/components/layout";
+import Layout from '@/app/components/layout';
+import Requestdemopage from '../components/pagecomponent/requestdemopage';
 
 export default function RequestDemo() {
-    return (
-        <Layout>
-            <div>Request Demo page</div>
-        </Layout>
-    );
+  return (
+    <Layout>
+      <Requestdemopage />
+    </Layout>
+  );
 }
