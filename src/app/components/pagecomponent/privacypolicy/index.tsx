@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '../../header/header';
-import Privacypolicydata from '../../privacypolicydata';
+import Privacypolicydata from '../../privacypolicydata/privacyPolicyData';
 import { Group, Heading, Hero, Title } from '@/app/styles/privacypolicy';
 import Privacypolicyhero from '../../privacypolicyHero/privacypolicyhero';
 
