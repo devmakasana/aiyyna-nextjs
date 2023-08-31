@@ -1,9 +1,11 @@
+'use client';
 import { Container } from '@/app/styles/commoncontainer';
 import React from 'react';
 import { Content, Heading, Description, Subcontent, Form, Main } from './styles';
 import Requestform from '../requestForm/requestform';
 import Image from 'next/image';
 import Requestsuccess from '../requestSuccess/requestsuccess';
+import Requesttitle from '../requestTitle/requesttitle';
 
 export default function Requestdemo() {
   return (
@@ -11,12 +13,7 @@ export default function Requestdemo() {
       <Container>
         <Main>
           <Content>
-            <Subcontent>
-              <Heading>Request A Demo</Heading>
-              <Description>
-                Just answer a few simple questions so we can personalise the right experience for you.
-              </Description>
-            </Subcontent>
+            <Requesttitle />
             <Form>
               <Requestform />
               {/* Request demo thanku you card */}

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { Main, Content, First, Label } from './styles';
 import Input from '../input/input';

@@ -7,13 +7,13 @@ import Herofooter from '../herosection/herofooter';
 export default function RequestHero() {
   return (
     <div>
-      <Main>
-        <Content>
-          <Header />
-          <Requestdemo />
-          <Herofooter />
-        </Content>
-      </Main>
+      <div className='request-main'>
+        {/* <Content> */}
+        <Header />
+        <Requestdemo />
+        <Herofooter />
+        {/* </Content> */}
+      </div>
     </div>
   );
 }
