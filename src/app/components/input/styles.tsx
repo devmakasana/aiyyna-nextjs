@@ -1,11 +1,12 @@
 import { colors } from '@/app/styles/colors';
-import { Body2 } from '@/app/styles/fontstyle';
+import { Body2, InputTitle } from '@/app/styles/fontstyle';
 import styled, { css } from 'styled-components';
 
 interface Props {
   placeholder?: any;
   width?: any;
   inpercentwidth?: any;
+  hasError?: any;
 }
 const Maindiv = styled.div<Props>`
   position: relative;
@@ -44,7 +45,6 @@ const Inputbox = styled.input<Props>`
 
   &::placeholder {
     color: ${colors.gray};
-
   }
   &[type='number'] {
     &::-webkit-inner-spin-button,
@@ -62,6 +62,11 @@ const Inputbox = styled.input<Props>`
   }
   &:hover {
     border: 1px solid #c5c8cd;
+    ${(props) =>
+      props.hasError &&
+      css`
+        border: 1px solid #FF5B60;
+      `}
   }
 
   &:active {
@@ -70,7 +75,17 @@ const Inputbox = styled.input<Props>`
   &:focus {
     border: 1px solid #635bff;
   }
-
+  ${(props) =>
+    props.hasError &&
+    css`
+      border: 1px solid #FF5B60 !important;
+      &:focus {
+        outline: none;
+      }
+    `}
+  svg {
+    stroke: 'red';
+  }
   ${(props) => props.placeholder && css``}
 `;
 
@@ -81,4 +96,17 @@ const Inputs = styled.div<Props>`
       width: ${props.inpercentwidth}%;
     `}
 `;
-export { Inputbox, Maindiv, Inputs };
+
+const Error = styled.div`
+  display: flex;
+  gap: 5px;
+  position: absolute;
+  right: 0;
+  top: -25px;
+  p {
+    ${InputTitle}
+    color: ${colors.red};
+    white-space: nowrap;
+  }
+`;
+export { Inputbox, Maindiv, Inputs, Error };
