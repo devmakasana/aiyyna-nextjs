@@ -2,6 +2,9 @@ import styled from 'styled-components';
 
 const Main = styled.div`
   padding-top: 50px;
+  @media (max-width: 449px) {
+    padding-bottom: 60px;
+  }
 `;
 
 const Box = styled.div`
