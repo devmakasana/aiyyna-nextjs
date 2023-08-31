@@ -8,6 +8,10 @@ const Maindiv = styled.div`
   align-items: center;
   padding-top: 154px;
   padding-bottom: 44px;
+  @media (max-width: 449px) {
+    padding-top: 106px;
+    gap: 40px;
+  }
   @media screen and (max-width: 991px) {
     width: auto;
     flex-direction: column;
@@ -31,6 +35,9 @@ const Maindiv = styled.div`
       bottom: 0;
       left: auto;
     }
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
   .image.ellipse {
     width: 100%;
@@ -46,6 +53,9 @@ const Maindiv = styled.div`
       top: 468px;
       right: 213px;
     }
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
   .image.white {
     width: 100%;
@@ -59,6 +69,9 @@ const Maindiv = styled.div`
     bottom: auto;
     left: 6%;
     right: auto;
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
   .image.round {
     width: 100%;
@@ -74,6 +87,9 @@ const Maindiv = styled.div`
     @media screen and (max-width: 991px) {
       bottom: 0;
     }
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
 `;
 const Leftcontent = styled.div`
@@ -84,21 +100,38 @@ const Leftcontent = styled.div`
   max-width: 608px;
   z-index: 3;
   position: relative;
+
+  @media (max-width: 449px) {
+    gap: 30px;
+    align-items: center;
+  }
 `;
 const Rightcontent = styled.div``;
 const Title = styled.div`
   ${Heading1}
   color: ${colors.title};
+  @media (max-width: 449px) {
+    text-align: center;
+    font-size: 36px;
+    line-height: normal;
+  }
 `;
 const Description = styled.div`
   color: #5a5a6c;
   ${Body1}
   color: ${colors.body};
+  @media (max-width: 449px) {
+    text-align: center;
+  }
 `;
 const Top = styled.div`
   display: flex;
   flex-direction: column;
   gap: 15px;
+  @media (max-width: 449px) {
+    max-width: 345px;
+    width: 100%;
+  }
 `;
 const Images = styled.div`
   margin-right: -292px;
