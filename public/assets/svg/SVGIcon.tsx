@@ -175,6 +175,21 @@ const getPath = (name: string, props: any) => {
           </defs>
         </>
       );
+    case 'error-icon':
+      return (
+        <>
+          <circle cx={8} cy={11.833} r={0.667} fill='#FF5B60' transform='rotate(-180 8 11.833)' />
+          <path
+            stroke='#FF5B60'
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            strokeWidth={1.2}
+            d='M8 9.833V5.167M14.667 8.5a6.667 6.667 0 1 1-13.334 0 6.667 6.667 0 0 1 13.334 0Z'
+            fill='none'
+          />
+        </>
+      );
+
     default:
       return <path />;
   }
