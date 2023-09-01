@@ -16,7 +16,7 @@ export default function Footer() {
             </Logo>
             <Right>
               <Rightfooter href={'/terms-conditions'}>Terms & Conditions</Rightfooter>
-              <Last href={''}>Privacy Policy</Last>
+              <Last href={'/privacy-policy'}>Privacy Policy</Last>
             </Right>
           </Content>
         </Container>

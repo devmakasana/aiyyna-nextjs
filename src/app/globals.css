@@ -119,6 +119,14 @@ a {
   background-position: 50%;
   background-size: cover;
 }
+@media (max-width: 449px) {
+  .contacthero {
+    background-image: url('../../public/images/contact-hero-mobile.png');
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+  }
+}
 .request-main {
   background-image: url('../../public/requestherogrid.png');
   background-size: contain;

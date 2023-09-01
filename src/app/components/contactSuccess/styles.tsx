@@ -10,6 +10,9 @@ const Content = styled.div`
   width: 100%;
   max-width: 588px;
   padding: 40px 100px;
+  @media (max-width: 449px) {
+    padding: 40px 24px;
+  }
 `;
 
 const Subcontent = styled.div`
@@ -23,6 +26,9 @@ const Logo = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 86px;
+  @media (max-width: 449px) {
+    padding-top: 78px;
+  }
 `;
 
 const Below = styled.div`
@@ -31,6 +37,9 @@ const Below = styled.div`
   gap: 10px;
   align-items: center;
   padding-bottom: 75px;
+  @media (max-width: 449px) {
+    padding-bottom: 66px;
+  }
 `;
 const Title = styled.div`
   color: ${colors.title};

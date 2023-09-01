@@ -23,8 +23,8 @@ const Input: React.FC<Props> = (Props) => {
         <Maindiv>
           {hasError && (
             <Error>
-              <SVGIcon name='error-icon' width='16' height='17' viewBox='0 0 16 17' fill='none' />
-              <p>This is an error message This is an error message.</p>
+              <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
+              <p>This is an error message.</p>
             </Error>
           )}
           <Inputbox
