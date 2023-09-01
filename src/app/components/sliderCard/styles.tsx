@@ -1,5 +1,5 @@
 import { colors } from '@/app/styles/colors';
-import { Body1, Heading1, Heading5 } from '@/app/styles/fontstyle';
+import { Body1, Body2, Heading1, Heading5 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 const Main = styled.div`
   width: 100%;
@@ -28,6 +28,9 @@ const Content = styled.div`
     margin-left: 0;
     margin-right: 0;
   }
+  @media (max-width: 449px) {
+    padding: 24px;
+  }
 `;
 const Sliderbox = styled.div``;
 const Line = styled.div`
@@ -49,6 +52,10 @@ const Description = styled.p`
   margin-top: 10px;
   color: ${colors.title};
   ${Body1}
+  @media (max-width:449px) {
+    font-size: 16px;
+    line-height: 160%;
+  }
 `;
 const Title = styled.div`
   color: ${colors.title};
@@ -57,19 +64,21 @@ const Title = styled.div`
 `;
 const Heading = styled.div`
   color: ${colors.body};
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  ${Body2};
   margin-top: 6px;
+  font-size: 15px;
+  @media (max-width: 449px) {
+    font-size: 14px;
+  }
 `;
 const Subheading = styled.div`
   color: ${colors.body};
+  ${Body2};
   font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   margin-top: 6px;
+  @media (max-width: 449px) {
+    font-size: 12px;
+  }
 `;
 
 export { Sliderbox, Logo, Description, Title, Heading, Subheading, Main, Line, Content };

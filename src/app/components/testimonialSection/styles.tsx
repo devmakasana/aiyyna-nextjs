@@ -10,6 +10,10 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   padding-top: 120px;
+
+  @media (max-width: 449px) {
+    padding-top: 60px;
+  }
 `;
 const Heading = styled.div`
   color: ${colors.primary};
@@ -31,6 +35,13 @@ const Subheading = styled.div`
   @media (max-width: 767px) {
     font-size: 30px;
     line-height: 40px;
+  }
+  @media (max-width: 449px) {
+    margin-top: 12px;
+    font-size: 26px;
+    text-align: center;
+    max-width: 345px;
+    width: 100%;
   }
 `;
 
