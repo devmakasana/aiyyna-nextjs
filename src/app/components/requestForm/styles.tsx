@@ -14,6 +14,9 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 449px) {
+    padding: 24px;
+  }
 `;
 
 const First = styled.div`

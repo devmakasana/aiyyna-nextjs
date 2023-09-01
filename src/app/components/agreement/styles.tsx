@@ -13,6 +13,10 @@ const Maindiv = styled.div`
     color: ${colors.primary};
 
     text-decoration-line: underline;
+      @media (max-width: 449px) {
+    text-decoration-line: none;
+
+  }
   }
 `;
 export { Maindiv };

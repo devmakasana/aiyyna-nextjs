@@ -11,9 +11,6 @@ const Content = styled.div`
     padding-top: 0;
     padding-bottom: 0;
   }
-  @media (max-width: 449px) {
-    padding-bottom: 16px;
-  }
 `;
 const Maindiv = styled.div`
   display: flex;

@@ -18,10 +18,14 @@ const Title = styled.div`
   ${Body2}
 `;
 const Description = styled.div`
-  color: ${colors};
-
+  color: ${colors.title};
   ${Heading2}
   text-align: center;
+  @media (max-width: 449px) {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 30px;
+  }
 `;
 const Heading = styled.div`
   width: 980px;
@@ -32,11 +36,23 @@ const Heading = styled.div`
   gap: 10px;
   align-items: center;
   justify-content: center;
+  @media (max-width: 449px) {
+    width: 100%;
+    padding-top: 126px;
+  }
 `;
 const Mainimage = styled.div`
   width: 980px;
   padding: 40px 0;
   margin: 0 auto;
+  @media (max-width: 449px) {
+    width: 100%;
+    padding: 30px 0;
+    .blogimage {
+      height: 230px;
+      width: 100%;
+    }
+  }
 `;
 
 export { Group, Hero, Title, Description, Heading, Mainimage };
