@@ -132,3 +132,10 @@ a {
   background-size: contain;
   background-position: 50%;
 }
+@media (max-width: 449px) {
+  .request-main {
+    background-image: url('../../public/images/requestdemo-hero-mobile.png');
+    background-size: cover;
+    background-position: bottom;
+  }
+}
