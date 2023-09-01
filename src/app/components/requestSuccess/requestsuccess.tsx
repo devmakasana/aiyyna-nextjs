@@ -9,7 +9,7 @@ export default function Requestsuccess() {
       <Main>
         <Content>
           <Above>
-            <Image src={thankucard} alt='thankucard' width={198} height={198} />
+            <Image src={thankucard} alt='thankucard' width={198} height={198} className='image-card' />
           </Above>
           <Below>
             <Description>

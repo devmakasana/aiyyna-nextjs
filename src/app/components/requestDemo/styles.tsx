@@ -13,6 +13,11 @@ const Content = styled.div`
   padding-bottom: 42px;
   position: relative;
   z-index: 1;
+  @media (max-width: 449px) {
+    padding-top: 126px;
+    padding-bottom: 60px;
+    gap: 40px;
+  }
 `;
 const Main = styled.div`
   .image-hero {
@@ -30,6 +35,9 @@ const Main = styled.div`
     bottom: auto;
     left: 18%;
     right: auto;
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
   .image-pink {
     background: #c0c0fe;
@@ -41,6 +49,9 @@ const Main = styled.div`
     bottom: 24%;
     left: auto;
     right: 19%;
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
   .image-blue {
     background: #b6dfff;
@@ -52,6 +63,9 @@ const Main = styled.div`
     bottom: auto;
     left: auto;
     right: 26%;
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
   .image-white {
     width: 100%;
@@ -63,6 +77,9 @@ const Main = styled.div`
     bottom: 1%;
     left: 0%;
     right: 0%;
+    @media (max-width: 449px) {
+      display: none;
+    }
   }
 `;
 const Heading = styled.div`
