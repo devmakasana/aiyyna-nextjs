@@ -26,7 +26,13 @@ export default function Inventory() {
           </Points>
         </Leftdiv>
         <Rightdiv>
-          <Image src={'/images/Inventoryimg.svg'} alt='Inventoryimg' width={623} height={374} />
+          <Image
+            src={'/images/Inventoryimg.svg'}
+            alt='Inventoryimg'
+            width={623}
+            height={374}
+            className='inventoryimage'
+          />
         </Rightdiv>
       </Maindiv>
     </Container>
