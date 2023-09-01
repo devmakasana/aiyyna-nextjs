@@ -18,6 +18,9 @@ const Form = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+  @media (max-width: 449px) {
+    padding: 24px;
+  }
 `;
 
 const Label = styled.div`
@@ -52,7 +55,7 @@ const Textarea = styled.textarea`
   border-radius: 4px;
   color: ${colors.title};
   ${Body2}
-  height: 139px;
+  height: 150px;
   resize: none;
 
   &::placeholder {

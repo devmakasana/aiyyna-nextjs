@@ -65,7 +65,7 @@ const Inputbox = styled.input<Props>`
     ${(props) =>
       props.hasError &&
       css`
-        border: 1px solid #FF5B60;
+        border: 1px solid #ff5b60;
       `}
   }
 
@@ -78,7 +78,7 @@ const Inputbox = styled.input<Props>`
   ${(props) =>
     props.hasError &&
     css`
-      border: 1px solid #FF5B60 !important;
+      border: 1px solid #ff5b60 !important;
       &:focus {
         outline: none;
       }
@@ -107,6 +107,11 @@ const Error = styled.div`
     ${InputTitle}
     color: ${colors.red};
     white-space: nowrap;
+  }
+  @media (max-width: 449px) {
+    p {
+      display: none;
+    }
   }
 `;
 export { Inputbox, Maindiv, Inputs, Error };
