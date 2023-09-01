@@ -1,5 +1,5 @@
 import { colors } from '@/app/styles/colors';
-import { Body2, Heading1 } from '@/app/styles/fontstyle';
+import { Body2, Heading1, Heading2 } from '@/app/styles/fontstyle';
 import styled from 'styled-components';
 
 const Group = styled.div`
@@ -11,6 +11,10 @@ const Group = styled.div`
 const Title = styled.div`
   color: ${colors.title};
   ${Heading1}
+  @media (max-width: 449px) {
+  ${Heading2}
+   
+    }
 `;
 const Description = styled.div`
   color: ${colors.body};
@@ -26,5 +30,10 @@ const Heading = styled.div`
   gap: 15px;
   align-items: center;
   justify-content: center;
+  @media (max-width: 449px) {
+    width: 100%;
+    max-width: 100%;
+    padding: 126px 0 60px;
+  }
 `;
-export { Group,  Title, Description, Heading };
+export { Group, Title, Description, Heading };

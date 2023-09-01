@@ -16,7 +16,7 @@ const Main = styled.div`
   background-position: center;
   max-width: 100%;
   @media (max-width: 449px) {
-    background-image: url('footercta-mobile.svg');
+    background-image: url('../../footercta-mobile.svg');
   }
 `;
 

@@ -24,7 +24,7 @@ const MainHeader = styled.div<Props>`
   background-color: rgba(0, 0, 0, 0);
   padding-top: 30px;
   @media (max-width: 991px) {
-    padding-top: 20px;
+    padding: 14px 0;
   }
   ${(props) =>
     props.isScrollPage &&

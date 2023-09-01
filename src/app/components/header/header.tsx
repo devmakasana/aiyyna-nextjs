@@ -44,7 +44,7 @@ const Header: React.FC<Props> = (Props) => {
     return () => window.removeEventListener('scroll', handleScroll);
   });
 
-  if (clientWindowHeight > 10) {
+  if (clientWindowHeight > 0) {
     isScrollPage = true;
   } else {
     isScrollPage = false;

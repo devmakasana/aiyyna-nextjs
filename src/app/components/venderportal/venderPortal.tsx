@@ -9,7 +9,8 @@ export default function Venderportal() {
     <Container>
       <Maindiv>
         <Leftdiv>
-          <Image src={'/images/Venderportal.svg'} alt='Venderportal' width={623} height={374} />
+          <Image src={'/images/Venderportal.svg'} alt='Venderportal' width={623} height={374} className='portalimage' />
+         
         </Leftdiv>
         <Rightdiv>
           <Title>Vender Portal</Title>
