@@ -97,6 +97,13 @@ a {
   background-repeat: repeat-x;
   background-size: contain;
 }
+@media (max-width: 449px) {
+  .homehero {
+    background-size: cover;
+    background-image: url('../../public/images/hero-mobile.png');
+    background-position: top;
+  }
+}
 .termsconditionshero {
   background-image: url('../../public/maskbg.png');
   background-position: 50%;
