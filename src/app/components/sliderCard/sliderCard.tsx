@@ -16,7 +16,7 @@ export default function SliderCard(props: props) {
         <Content>
           <Sliderbox>
             <Logo>
-              <Image src={props.imageSrc} alt='profile-image' width={60} height={60} />
+              <Image className="profile" src={props.imageSrc} alt='profile-image' width={60} height={60} />
             </Logo>
             <Description>{props.description}</Description>
             <Title>{props.title}</Title>
