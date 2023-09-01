@@ -21,6 +21,11 @@ const Content = styled(Link)`
     width: 100%;
     max-width: 410px;
   }
+  @media (max-width: 449px) {
+    .card-image {
+      height: 235px;
+    }
+  }
 `;
 
 const Below = styled.div`
@@ -30,6 +35,9 @@ const Below = styled.div`
   gap: 8px;
   background-color: #fff;
   border-radius: 0 0 10px 10px;
+  @media (max-width: 449px) {
+    padding: 15px 14px;
+  }
 `;
 const Datetitle = styled.div`
   color: ${colors.body};
@@ -37,12 +45,16 @@ const Datetitle = styled.div`
 `;
 
 const Description = styled.div`
- 
   ${Heading4}
   color: ${colors.title};
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
+  @media (max-width: 449px) {
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 600;
+  }
 `;
 export { Below, Datetitle, Description, Content };
