@@ -1,5 +1,5 @@
 import { colors } from '@/app/styles/colors';
-import { Heading1 } from '@/app/styles/fontstyle';
+import { Heading1, Heading2 } from '@/app/styles/fontstyle';
 import { styled } from 'styled-components';
 
 const Title = styled.div`
@@ -7,5 +7,10 @@ const Title = styled.div`
   color: ${colors.title};
   ${Heading1}
   text-align: center;
+  @media (max-width: 449px) {
+    ${Heading2}
+    padding: 126px 0 60px;
+    
+  }
 `;
 export { Title };
