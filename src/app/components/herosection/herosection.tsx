@@ -36,7 +36,7 @@ export default function Herosection() {
               <Image src={'/images/whiteshape.png'} alt='heroimage' width={375} height={755} className='image' />
             </div>
             <div className='image round'>
-              <Image src={'/images/purplehape.png'} alt='heroimage' width={367} height={267} className='image' />
+              <Image src={'/images/purpleshape.png'} alt='heroimage' width={367} height={267} className='image' />
             </div>
           </Rightcontent>
         </Maindiv>

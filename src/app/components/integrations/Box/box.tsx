@@ -10,7 +10,7 @@ export default function Iconbox(props: props) {
   return (
     <Mainbox>
       <Subbox>
-        <Image src={props.imgsrc} alt='image' width={props.width} height={props.height} />
+        <Image src={props.imgsrc} alt='image' width={props.width} height={props.height} className='logoicon' />
       </Subbox>
     </Mainbox>
   );
