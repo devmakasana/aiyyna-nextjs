@@ -22,8 +22,8 @@ export default function Features({
         </Topcontent>
         {!isEmpty(featuresData) && (
           <Bottomcontent>
-            {featuresData?.map((item) => {
-              return <FeatureCard src={item?.banner?.url} title={item?.title} description={item?.description} />;
+            {featuresData?.map((item, index: number) => {
+              return <FeatureCard key={index} src={item?.banner?.url} title={item?.title} description={item?.description} slug={item?.slug}/>;
             })}
           </Bottomcontent>
         )}
