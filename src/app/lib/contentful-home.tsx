@@ -37,18 +37,6 @@ intigrationTitle
     }
 `;
 
-const POST_GRAPHQL_FEATURES_DATA = `
-  title
-   slug
-   description
-   banner{
-      url
-   }
-   body{
-     json
-   }
-`;
-
 export async function getHomePageContent({ id, preview }: { id: string; preview: boolean }) {
   const entriesData1 = await fetchGraphQL(
     `query {
@@ -66,17 +54,4 @@ export async function getHomePageContent({ id, preview }: { id: string; preview:
     }`
   );
   return { ...entriesData1?.data?.pageHome, ...entriesData2?.data?.pageHome };
-}
-
-export async function getAllFeaturesData() {
-  const featuresData = await fetchGraphQL(
-    `query{
-      featureCollection{
-        items{
-          ${POST_GRAPHQL_FEATURES_DATA}
-        }
-      }
-  }`
-  );
-  return featuresData?.data?.featureCollection?.items;
 }

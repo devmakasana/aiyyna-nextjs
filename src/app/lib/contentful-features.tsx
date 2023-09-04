@@ -22,6 +22,18 @@ body{
 }
 `;
 
+const POST_GRAPHQL_FEATURES_DATA = `
+  title
+   slug
+   description
+   banner{
+      url
+   }
+   body{
+     json
+   }
+`;
+
 export async function getFeaturesWithSlug({ slug, preview }: { slug: string; preview: boolean }) {
   const entries = await fetchGraphQL(
     `query {
@@ -33,4 +45,18 @@ export async function getFeaturesWithSlug({ slug, preview }: { slug: string; pre
               }`
   );
   return { ...entries?.data?.featureCollection?.items[0] };
+}
+
+
+export async function getAllFeaturesData() {
+  const featuresData = await fetchGraphQL(
+    `query{
+      featureCollection{
+        items{
+          ${POST_GRAPHQL_FEATURES_DATA}
+        }
+      }
+  }`
+  );
+  return featuresData?.data?.featureCollection?.items;
 }
