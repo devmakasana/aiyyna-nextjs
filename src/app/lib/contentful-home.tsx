@@ -15,6 +15,7 @@ companySectionContentCollection{
   }
 }
 companySectionTitle
+featureSectionTitle
 `;
 
 const POST_GRAPHQL_HOME_PAGE_CONTENT_DATA2 = `
@@ -36,18 +37,16 @@ intigrationTitle
     }
 `;
 
-const POST_GRAPHQL_HOME_PAGE_CONTENT_DATA3 = `
-featureSectionTitle
-featureSectionContentCollection{
-    items{
-      title
-      slug
-      description
-      banner{
-        url
-      }
-    }
-  }
+const POST_GRAPHQL_FEATURES_DATA = `
+  title
+   slug
+   description
+   banner{
+      url
+   }
+   body{
+     json
+   }
 `;
 
 export async function getHomePageContent({ id, preview }: { id: string; preview: boolean }) {
@@ -66,12 +65,18 @@ export async function getHomePageContent({ id, preview }: { id: string; preview:
         }
     }`
   );
-  const entriesData3 = await fetchGraphQL(
+  return { ...entriesData1?.data?.pageHome, ...entriesData2?.data?.pageHome };
+}
+
+export async function getAllFeaturesData() {
+  const featuresData = await fetchGraphQL(
     `query{
-        pageHome(id: "${id}", preview: ${preview ? 'true' : 'false'}){
-            ${POST_GRAPHQL_HOME_PAGE_CONTENT_DATA3}
+      featureCollection{
+        items{
+          ${POST_GRAPHQL_FEATURES_DATA}
         }
-    }`
+      }
+  }`
   );
-  return { ...entriesData1?.data?.pageHome, ...entriesData2?.data?.pageHome, ...entriesData3?.data?.pageHome };
+  return featuresData?.data?.featureCollection?.items;
 }
