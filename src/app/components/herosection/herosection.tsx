@@ -6,26 +6,27 @@ import Button from '../button/button';
 import Image from 'next/image';
 import { Container } from '@/app/styles/commoncontainer';
 import Herofooter from './herofooter/herofooter';
+import { isEmpty } from '@/app/helper/helper';
+import { HomePageDetail } from '@/app/model/homePageModel';
 
-export default function Herosection() {
+export default function Herosection({ details }: { details: HomePageDetail }) {
   return (
     <>
       <Container>
         <Maindiv>
           <Leftcontent>
             <Top>
-              <Title>Digital Infrastructure for Textile Business</Title>
-              <Description>
-                Aiyyna ERP is a software solution that is specifically designed to cater to the unique needs of the
-                textile industry.
-              </Description>
+              {!isEmpty(details?.title) && <Title>{details?.title}</Title>}
+              {!isEmpty(details?.description) && <Description>{details?.description}</Description>}
             </Top>
             <Button title='Book A Demo' width={156} />
           </Leftcontent>
           <Rightcontent>
-            <Images>
-              <Image src={'/images/heroimage.svg'} alt='heroimage' width={900} height={586} className='heroimage' />
-            </Images>
+            {!isEmpty(details?.banner?.url) && (
+              <Images>
+                <Image src={details?.banner?.url} alt='heroimage' width={900} height={586} className='heroimage' />
+              </Images>
+            )}
             <div className='image circle'>
               <Image src={'/images/blueshape.png'} alt='heroimage' width={367} height={378} className='image' />
             </div>
@@ -41,7 +42,12 @@ export default function Herosection() {
           </Rightcontent>
         </Maindiv>
       </Container>
-      <Herofooter />
+      {!isEmpty(details?.companySectionContentCollection?.items) && !isEmpty(details?.companySectionTitle) && (
+        <Herofooter
+          companyLogos={details?.companySectionContentCollection?.items}
+          companyTitle={details?.companySectionTitle}
+        />
+      )}
     </>
   );
 }

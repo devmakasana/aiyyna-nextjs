@@ -4,7 +4,7 @@ import { Main, Content, Description, Leftcontent, Rightcontent, Title, Row1, Row
 import Iconbox from './Box/box';
 import { Container } from '@/app/styles/commoncontainer';
 
-export default function Integrations() {
+export default function Integrations({IntegrationTitle}: {IntegrationTitle: string}) {
   return (
     <Main>
       <Container>
@@ -12,7 +12,7 @@ export default function Integrations() {
           <Leftcontent>
             <Title>Integrations</Title>
             <Description>
-              200+ Integrations <br></br> to help your business grow
+              {IntegrationTitle}
             </Description>
           </Leftcontent>
           <div className='icons'>
