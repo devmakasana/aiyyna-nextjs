@@ -1,17 +1,18 @@
 import React from 'react';
 import Header from '../../header/header';
 import Privacypolicydata from '../../privacypolicydata/privacyPolicyData';
-import { Group, Heading, Hero, Title } from '@/app/styles/privacypolicy';
 import Privacypolicyhero from '../../privacypolicyHero/privacypolicyhero';
+import { isEmpty } from '@/app/helper/helper';
+import { PrivacyPolicyModel } from '@/app/model/privacyPolicyModel';
 
-export default function Privacypolicy() {
+export default function Privacypolicy({ details }: {details: PrivacyPolicyModel}) {
   return (
     <div className='group'>
       <div className='hero'>
         <Header />
-        <Privacypolicyhero />
+        {!isEmpty(details?.name) && <Privacypolicyhero title={details?.name} />}
       </div>
-      <Privacypolicydata />
+      {!isEmpty(details?.content) && <Privacypolicydata contentData={details?.content} />}
     </div>
   );
 }
