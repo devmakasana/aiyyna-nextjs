@@ -7,7 +7,6 @@ export default function Featurehero({ title, description }: { title: string; des
   return (
     <Container>
       <Heading>
-        {' '}
         <Title>{title}</Title>
         <Description>{description}</Description>
       </Heading>
