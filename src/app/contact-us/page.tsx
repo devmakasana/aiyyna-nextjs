@@ -3,7 +3,7 @@ import Contactpage from '../components/pagecomponent/contact/contactPage';
 
 export default function ContactUS() {
   return (
-    <Layout CTAtitle='Let’s simplify & automate your marketing campaigns' CTAbtntext='Book A Demo'>
+    <Layout CTAtitle='Let’s simplify & automate your marketing campaigns' CTAbtntext='Book A Demo' href='/request-demo'>
       <Contactpage />
     </Layout>
   );

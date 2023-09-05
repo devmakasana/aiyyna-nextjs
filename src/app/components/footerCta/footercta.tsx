@@ -7,6 +7,7 @@ import Button from '../button/button';
 interface props {
   CTAtitle: string;
   CTAbtntext: string;
+  href?: string;
 }
 export default function FooterCTA(props: props) {
   return (
@@ -16,7 +17,7 @@ export default function FooterCTA(props: props) {
           <Container>
             <Content>
               <Description>{props.CTAtitle}</Description>
-              <Button title={props.CTAbtntext} />
+              <Button title={props.CTAbtntext} href={props.href} />
             </Content>
           </Container>
         </MainContent>

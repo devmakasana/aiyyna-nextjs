@@ -1,5 +1,6 @@
 import { colors } from '@/app/styles/colors';
 import { ButtonText } from '@/app/styles/fontstyle';
+import Link from 'next/link';
 import styled, { css } from 'styled-components';
 interface Props {
   isOpenMobileMenu?: any;
@@ -45,7 +46,7 @@ const Maindiv = styled.div`
   }
 `;
 
-const Logo = styled.div`
+const Logo = styled(Link)`
   height: 42px;
   @media (max-width: 991px) {
     height: 38px;

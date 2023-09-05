@@ -10,6 +10,7 @@ interface Props {
   width?: number;
   style?: Style;
   id?: string;
+  href?: string;
 }
 
 const Button: React.FC<Props> = (Props) => {
@@ -23,7 +24,7 @@ const Button: React.FC<Props> = (Props) => {
       type={type}
       width={width}
       {...props}>
-      <a>{title || ''}</a>
+      <a href={props.href}>{title || ''}</a>
     </Buttons>
   );
 };
