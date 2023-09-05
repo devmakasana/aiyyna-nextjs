@@ -2,11 +2,11 @@
 import React from 'react';
 import { Heading, Title } from './styles';
 
-export default function Privacypolicyhero({ title }: { title: string }) {
+export default function Privacypolicyhero() {
   return (
     <div>
       <Heading>
-        <Title>{title}</Title>
+        <Title>Privacy Policy</Title>
       </Heading>
     </div>
   );
