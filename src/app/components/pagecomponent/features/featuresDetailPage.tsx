@@ -18,7 +18,7 @@ export default function Featuredetailpage({ details }: { details: FeaturesPageMo
         }
       }
     );
-  }, []);
+  }, [details?.serviceSectionContentCollection?.items]);
 
   return (
     <div className='group'>

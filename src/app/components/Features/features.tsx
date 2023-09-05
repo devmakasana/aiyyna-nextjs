@@ -14,10 +14,22 @@ export default function Features({
   featuresTitle?: string;
 }) {
   const renderFeaturesData = useMemo(() => {
-    return featuresData?.map((item, index: number) => {
-      return <FeatureCard key={index} src={item?.banner?.url} title={item?.title} description={item?.description} slug={item?.slug}/>;
-    });
-  }, []);
+    if (!isEmpty(featuresData)) {
+      return featuresData?.map((item, index: number) => {
+        return (
+          <FeatureCard
+            key={index}
+            src={item?.banner?.url}
+            title={item?.title}
+            description={item?.description}
+            slug={item?.slug}
+          />
+        );
+      });
+    } else {
+      return null;
+    }
+  }, [featuresData]);
 
   return (
     <Container id='featureId'>

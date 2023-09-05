@@ -14,10 +14,14 @@ export default function Herofooter({
   companyTitle?: string;
 }) {
   const renderCompanyLogos = useMemo(() => {
-    return companyLogos?.map((item, index: number) => {
-      return <Image key={index} src={item?.logo?.url} alt='logoipsum' width={159} height={42} className='svg-forth' />;
-    });
-  }, []);
+    if (!isEmpty(companyLogos)) {
+      return companyLogos?.map((item, index: number) => {
+        return (
+          <Image key={index} src={item?.logo?.url} alt='logoipsum' width={159} height={42} className='svg-forth' />
+        );
+      });
+    } else return null;
+  }, [companyLogos]);
 
   return (
     <Container>

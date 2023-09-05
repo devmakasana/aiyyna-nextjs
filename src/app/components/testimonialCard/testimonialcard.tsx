@@ -32,19 +32,21 @@ export default function TestimonialCard({
   };
 
   const renderTestinomialData = useMemo(() => {
-    return testinomialData?.map((item, index: number) => {
-      return (
-        <SliderCard
-          key={index}
-          imageSrc={item?.profile?.url}
-          description={item?.content}
-          title={item?.userName}
-          heading={item?.companyName}
-          subheading={item?.designation}
-        />
-      );
-    });
-  }, []);
+    if (!isEmpty(testinomialData)) {
+      return testinomialData?.map((item, index: number) => {
+        return (
+          <SliderCard
+            key={index}
+            imageSrc={item?.profile?.url}
+            description={item?.content}
+            title={item?.userName}
+            heading={item?.companyName}
+            subheading={item?.designation}
+          />
+        );
+      });
+    } else return null
+  }, [testinomialData]);
 
   return (
     <div>
