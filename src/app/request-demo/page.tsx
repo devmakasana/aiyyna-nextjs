@@ -3,7 +3,7 @@ import Requestdemopage from '../components/pagecomponent/requestDemo/requestDemo
 
 export default function RequestDemo() {
   return (
-    <Layout CTAtitle='Let’s simplify & automate your marketing campaigns' CTAbtntext='Book A Demo'>
+    <Layout>
       <Requestdemopage />
     </Layout>
   );

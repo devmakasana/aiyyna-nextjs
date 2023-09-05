@@ -19,7 +19,7 @@ export default function Herosection({ details }: { details: HomePageDetail }) {
               {!isEmpty(details?.title) && <Title>{details?.title}</Title>}
               {!isEmpty(details?.description) && <Description>{details?.description}</Description>}
             </Top>
-            <Button title='Book A Demo' width={156} />
+            <Button title='Book A Demo' width={156} href='/request-demo' />
           </Leftcontent>
           <Rightcontent>
             {!isEmpty(details?.banner?.url) && (

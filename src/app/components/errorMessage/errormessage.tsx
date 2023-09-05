@@ -13,7 +13,7 @@ export default function Errormessage() {
           <Title>Whoops!</Title>
           <Description>We can’t seem to find the page thatyou’re looking for</Description>
         </Heading>
-        <Button title='Back to home' />
+        <Button title='Back to home' href='/' />
       </Bottom>
     </Maindiv>
   );

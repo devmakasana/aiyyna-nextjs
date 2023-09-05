@@ -54,7 +54,7 @@ const Header: React.FC<Props> = (Props) => {
       <MainHeader isScrollPage={isScrollPage}>
         <Container>
           <Maindiv>
-            <Logo>
+            <Logo href={'/'}>
               {' '}
               <Image src={logo} alt='aiyynalogo' width={145} height={42} className='responsivelogo' />
             </Logo>
@@ -63,15 +63,15 @@ const Header: React.FC<Props> = (Props) => {
                 <Link href={''} className='link'>
                   Features
                 </Link>
-                <Link href={''} className='link'>
+                <Link href={'/contact-us'} className='link'>
                   Contact Us
                 </Link>
-                <Link href={''} className='link'>
+                <Link href={'/blog'} className='link'>
                   Blog
                 </Link>
               </Links>
-              <Button title='Sign In' secondary />
-              <Button title='Sign Up' />
+              <Button title='Sign In' secondary href='https://dash.aiyyna.com/login' />
+              <Button title='Sign Up' href='https://dash.aiyyna.com/signup' />
             </Rightheader>
 
             <Dropdown
