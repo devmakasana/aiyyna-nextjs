@@ -4,14 +4,17 @@ import Image from 'next/image';
 import { Main, Content, Left, Right, Datetiltle, Heading, Description } from './styles';
 import { Container } from '@/app/styles/commoncontainer';
 import Button from '../button/button';
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+
 
 interface props {
   imgSrc: string;
   width: number;
   height: number;
-  datetitle: string;
+  datetitle: string | null;
   heading: string;
   description: string;
+  slug: string
 }
 
 export default function Mainblogcard(props: props) {
@@ -26,8 +29,8 @@ export default function Mainblogcard(props: props) {
             <Right>
               <Datetiltle>{props.datetitle}</Datetiltle>
               <Heading>{props.heading}</Heading>
-              <Description>{props.description}</Description>
-              <Button title='Read More' width={135} />
+              <Description><ReactMarkdown>{props.description}</ReactMarkdown></Description>
+              <Button title='Read More' width={135} href={`/blog/${props.slug}`}/>
             </Right>
           </Content>
         </Container>

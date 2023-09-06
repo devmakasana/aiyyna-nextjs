@@ -1,32 +1,40 @@
-import React from 'react';
-import { Group, Hero, Title } from '@/app/styles/blogpage';
-import FooterCTA from '@/app/components/footerCta/footercta';
-import Footer from '@/app/components/footer/footer';
+import React, { useMemo } from 'react';
 import Header from '../../header/header';
 import Mainblogcard from '../../mainBlogCard/mainblogcard';
 import Blogallcard from '../../blogAll/blogallcard';
 import Bloghero from '../../blogHero/bloghero';
-import Blogbutton from '../../blogButton/blogbutton';
-export default function Blogpage() {
+import { isEmpty } from '@/app/helper/helper';
+import { BlogModel } from '@/app/model/blogModels';
+export default function Blogpage({ details, allBlogs }: { details: BlogModel; allBlogs: BlogModel[] }) {
+  const renderDate = useMemo(() => {
+    if (!isEmpty(details?.date)) {
+      const inputDate = new Date(details?.date);
+      const day = inputDate.getDate().toString().padStart(2, '0');
+      const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(inputDate);
+      const year = inputDate.getFullYear();
+      const date = `${day} ${month}, ${year}`;
+      return date;
+    } else return null
+  }, [details?.date]);
+
   return (
     <div className='group'>
       <div className='hero'>
         <Header />
-        {/* <Title>Blog</Title> */}
         <Bloghero />
       </div>
-      <Mainblogcard
-        imgSrc={'/images/mainblog.png'}
-        width={623}
-        height={415}
-        datetitle={'09 Feb, 2022'}
-        heading={'The 5 Core Values of a Strong Workplace'}
-        description={
-          'Lorem ipsum dolor sit amet consectetur. Leo blandit integer cursus quis mus in lectus. Integer nunc ultricies enim cursus. Vel aliquet senectus arcu sit non nunc porttitor volutpat. Nunc in dignissim nascetur proin.s'
-        }
-      />
-      <Blogallcard />
-      <Blogbutton />
+      {!isEmpty(details?.banner?.url) && !isEmpty(details?.title) && !isEmpty(details?.date) && (
+        <Mainblogcard
+          imgSrc={details?.banner?.url}
+          width={623}
+          height={415}
+          slug={details?.slug}
+          datetitle={renderDate}
+          heading={details?.title}
+          description={details?.description}
+        />
+      )}
+      {!isEmpty(allBlogs) && <Blogallcard allBlogs={allBlogs} />}
     </div>
   );
 }

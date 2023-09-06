@@ -1,87 +1,84 @@
 'use client';
+import React, { useMemo, useState } from 'react';
 import { Container } from '@/app/styles/commoncontainer';
-import React from 'react';
 import { Content } from './styles';
 import Blogcard from '../blogCard/blogcard';
+import { isEmpty } from '@/app/helper/helper';
+import Paginationbutton from '../paginationButton/paginationbutton';
+import { ButtonContent } from '../blogButton/styles';
+import { BlogModel } from '@/app/model/blogModels';
 
-export default function Blogallcard() {
+export default function Blogallcard({ allBlogs }: { allBlogs: BlogModel[] }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 9;
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = Math.min(startIndex + itemsPerPage, allBlogs?.length);
+  let currentBlogs = allBlogs?.slice(startIndex, endIndex);
+
+  const handleNextClick = () => {
+    if (currentPage < Math.ceil(allBlogs?.length / itemsPerPage)) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePreviousClick = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
+  const renderBlogs = useMemo(() => {
+    if (!isEmpty(currentBlogs)) {
+      return currentBlogs?.map((item, index: number) => {
+        const inputDate = new Date(item?.date);
+        const day = inputDate.getDate().toString().padStart(2, '0');
+        const month = new Intl.DateTimeFormat('en', { month: 'short' }).format(inputDate);
+        const year = inputDate.getFullYear();
+        return (
+          <>
+            {!isEmpty(item?.banner?.url) && !isEmpty(item?.title) && (
+              <Blogcard
+                key={index}
+                imgSrc={item?.banner?.url}
+                width={410}
+                height={275}
+                datetitle={`${day} ${month}, ${year}`}
+                descriprion={item?.title}
+                href={`/blog/${item?.slug}`}
+              />
+            )}
+          </>
+        );
+      });
+    } else return null;
+  }, [currentBlogs]);
+
   return (
     <div>
       <Container>
-        <Content>
-          <Blogcard
-            imgSrc={'/images/marketinglead.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'10 Proven Email Marketing Lead Generation Techniques'}
-            href={''}
-          />
-          <Blogcard
-            imgSrc={'/images/business.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'4 Questions to Ask a Consultant or Business Advisor Before Hiring Them'}
-            href={''}
-          />
-          <Blogcard
-            imgSrc={'/images/perfectwrite.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'How to write a Perfect Elevator Pitch?'}
-            href={''}
-          />
-          <Blogcard
-            imgSrc={'/images/promotional.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'5 Ways to Boost Your Business with Promotional Marketing'}
-            href={''}
-          />
-          <Blogcard
-            imgSrc={'/images/leads.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'How Do I Attract Prospects vs Leads in my Business?'}
-            href={''}
-          />{' '}
-          <Blogcard
-            imgSrc={'/images/e-commerce.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'Want to create a great value proposition in marketing? Use sales and analytics.'}
-            href={''}
-          />{' '}
-          <Blogcard
-            imgSrc={'/images/social.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'The Secret of Social Media: Drives 20% More Sales'}
-            href={''}
-          />{' '}
-          <Blogcard
-            imgSrc={'/images/perfectwrite.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'A Beginner’s Guide To Creating A Solid Foundation For Your Sales Operations'}
-            href={''}
-          />{' '}
-          <Blogcard
-            imgSrc={'/images/googlesheet.png'}
-            width={410}
-            height={275}
-            datetitle={'09 Feb, 2022'}
-            descriprion={'The Ultimate Guide To Google Sheets For The Marketers: Part 2 – Using Formulas'}
-            href={''}
-          />
-        </Content>
+        {<Content>{renderBlogs}</Content>}
+        <ButtonContent>
+          {currentPage > 1 && (
+            <Paginationbutton
+              title='Previous'
+              isAnglebutton='true'
+              iconName='pre-arrow'
+              iconSize='14'
+              iconViewBox='0 0 14 14'
+              onClick={handlePreviousClick}
+            />
+          )}
+
+          {endIndex < allBlogs?.length && (
+            <Paginationbutton
+              title='Next'
+              iconName='next-arrow'
+              iconSize='14'
+              iconViewBox='0 0 14 14'
+              onClick={handleNextClick}
+            />
+          )}
+        </ButtonContent>
       </Container>
     </div>
   );

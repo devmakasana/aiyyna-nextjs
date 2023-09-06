@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-const Content = styled.div`
+const ButtonContent = styled.div`
   display: flex;
   justify-content: center;
   gap: 16px;
@@ -10,4 +10,4 @@ const Content = styled.div`
   }
 `;
 
-export { Content };
+export { ButtonContent };
