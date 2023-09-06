@@ -7,11 +7,12 @@ interface props {
   src: string;
   description?: String;
   title: string;
+  slug: string
 }
 export default function FeatureCard(props: props) {
   return (
     <>
-      <Card href={''}>
+      <Card href={`/feature/${props.slug}`}>
         <CardImage>
           <Image src={props.src} alt='invoicing card' width={412} height={220} className='card-image' />
         </CardImage>

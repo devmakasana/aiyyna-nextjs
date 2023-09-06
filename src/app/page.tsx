@@ -1,8 +1,9 @@
 import Homepage from '@/app/components/pagecomponent/home/homePage';
 import Layout from './components/layout';
 import { HOME_PAGE_CONTENT_ID } from './components/constant/constant';
-import { getAllFeaturesData, getHomePageContent } from './lib/contentful-home';
+import {  getHomePageContent } from './lib/contentful-home';
 import { getSEOData } from './helper/helper';
+import { getAllFeaturesData } from './lib/contentful-features';
 
 async function getContent() {
   const details = await getHomePageContent({ id: HOME_PAGE_CONTENT_ID, preview: false });

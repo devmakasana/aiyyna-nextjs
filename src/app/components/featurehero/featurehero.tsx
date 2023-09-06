@@ -3,16 +3,12 @@ import React from 'react';
 import { Description, Heading, Title } from './styles';
 import { Container } from '@/app/styles/commoncontainer';
 
-export default function Featurehero() {
+export default function Featurehero({ title, description }: { title: string; description: string }) {
   return (
     <Container>
       <Heading>
-        {' '}
-        <Title>Invoicing</Title>
-        <Description>
-          Aiyyna offers an invoicing feature that enables users to create, manage and send invoices to their customers
-          seamlessly. This feature helps streamline the invoicing process, which saves time and reduces errors.
-        </Description>
+        <Title>{title}</Title>
+        <Description>{description}</Description>
       </Heading>
     </Container>
   );
