@@ -1,1 +1,2 @@
 export const HOME_PAGE_CONTENT_ID = "7jJiXDeeWtNoCFU1GCf7M"
+export const PRIVACY_POLICY_PAGE_CONTENT_ID = "3MhAY6pUGmdJUlEltfeDFN"

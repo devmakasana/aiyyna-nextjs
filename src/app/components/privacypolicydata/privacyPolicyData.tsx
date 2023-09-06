@@ -1,14 +1,16 @@
 'use client';
 import React from 'react';
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { privacypolicydata } from '@/app/sampleData/workdata';
 import { Container } from '@/app/styles/commoncontainer';
 import { Maindiv } from './styles';
-export default function Privacypolicydata() {
+import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
+
+export default function Privacypolicydata({ contentData }: { contentData: string }) {
   return (
     <>
       <Container>
-        <Maindiv>{documentToReactComponents(privacypolicydata)}</Maindiv>
+        {/* <Maindiv> */}
+          <ReactMarkdown>{contentData}</ReactMarkdown>
+        {/* </Maindiv> */}
       </Container>
     </>
   );

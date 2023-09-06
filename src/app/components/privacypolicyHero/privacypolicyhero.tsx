@@ -6,7 +6,7 @@ export default function Privacypolicyhero() {
   return (
     <div>
       <Heading>
-        <Title>Privacy Policy </Title>
+        <Title>Privacy Policy</Title>
       </Heading>
     </div>
   );
