@@ -8,9 +8,9 @@ export default function Privacypolicydata({ contentData }: { contentData: string
   return (
     <>
       <Container>
-        {/* <Maindiv> */}
+        <Maindiv>
           <ReactMarkdown>{contentData}</ReactMarkdown>
-        {/* </Maindiv> */}
+        </Maindiv>
       </Container>
     </>
   );

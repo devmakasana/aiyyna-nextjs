@@ -1,7 +1,6 @@
 import { fetchGraphQL } from './contentful';
 
 const POST_GRAPHQL_PRIVACY_POLICY_CONTENT_DATA = `
-name
 content 
 `;
 
