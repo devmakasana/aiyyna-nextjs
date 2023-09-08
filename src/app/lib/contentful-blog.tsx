@@ -9,6 +9,11 @@ seoMetadataCollection{
 `;
 
 const POST_GRAPHQL_BLOG_CONTENT_DATA = `
+title
+seoMetadata{
+  seoTitle
+}
+featuredBlog{
   title
   slug
   date
@@ -16,7 +21,7 @@ const POST_GRAPHQL_BLOG_CONTENT_DATA = `
     url
   }
   description
-  ${POST_GRAPHQL_METADATE_CONTENT}
+}
 `;
 
 const POST_GRAPHQL_ALL_BLOG_CONTENT_DATA = `
@@ -49,13 +54,11 @@ export async function getBlogData({ id, preview }: { id: string; preview: boolea
   const entries = await fetchGraphQL(
     `query {
             pageBlog(id : "${id}", preview: ${preview ? 'true' : 'false'}){
-              featuredBlog{
                 ${POST_GRAPHQL_BLOG_CONTENT_DATA}
-              }
             }
         }`
   );
-  return entries?.data?.pageBlog?.featuredBlog;
+  return entries?.data?.pageBlog;
 }
 
 export async function getAllBlogs({ preview }: { preview: boolean }) {

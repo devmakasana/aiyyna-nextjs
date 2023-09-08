@@ -5,7 +5,7 @@ import Blogallcard from '../../blogAll/blogallcard';
 import Bloghero from '../../blogHero/bloghero';
 import { isEmpty } from '@/app/helper/helper';
 import { BlogModel } from '@/app/model/blogModels';
-export default function Blogpage({ details, allBlogs }: { details: BlogModel; allBlogs: BlogModel[] }) {
+export default function Blogpage({ details, allBlogs, blogTitle }: { details: BlogModel; allBlogs: BlogModel[], blogTitle: string }) {
   const renderDate = useMemo(() => {
     if (!isEmpty(details?.date)) {
       const inputDate = new Date(details?.date);
@@ -21,7 +21,7 @@ export default function Blogpage({ details, allBlogs }: { details: BlogModel; al
     <div className='group'>
       <div className='hero'>
         <Header />
-        <Bloghero />
+        {!isEmpty(blogTitle) && <Bloghero title={blogTitle}/>}
       </div>
       {!isEmpty(details?.banner?.url) && !isEmpty(details?.title) && !isEmpty(details?.date) && (
         <Mainblogcard
