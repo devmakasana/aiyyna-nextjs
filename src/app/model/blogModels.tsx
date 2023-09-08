@@ -5,6 +5,9 @@ export interface BlogModel {
   banner: {
     url: string;
   };
+  body: {
+    json: any
+  }
   description: string;
   seoMetadataCollection: {
     items: [

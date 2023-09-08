@@ -4,7 +4,7 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 import { Container } from '@/app/styles/commoncontainer';
 import { Maindiv } from './styles';
 
-export default function Refund({refundPolicyData}: {refundPolicyData?: any}) {
+export default function Refund({ refundPolicyData }: { refundPolicyData: any }) {
   return (
     <>
       <Container>
