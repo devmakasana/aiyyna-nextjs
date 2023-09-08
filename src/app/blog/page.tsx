@@ -13,7 +13,7 @@ async function getContent() {
 export async function generateMetadata(){
   const { details } = await getContent();
   const seoData = await getSEOData({
-    data: details?.seoMetadataCollection?.items[0]
+    data: details?.seoMetadata
   });
   return seoData;
 }
@@ -22,7 +22,7 @@ export default async function Blog() {
   const { details, allBlogs } = await getContent();
   return (
     <Layout>
-      <Blogpage details={details} allBlogs={allBlogs} />
+      <Blogpage details={details?.featuredBlog} allBlogs={allBlogs} blogTitle={details?.title}/>
     </Layout>
   );
 }
