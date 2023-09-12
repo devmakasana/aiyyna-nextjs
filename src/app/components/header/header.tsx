@@ -49,6 +49,14 @@ const Header: React.FC<Props> = (Props) => {
   } else {
     isScrollPage = false;
   }
+
+  const onClickFeature = useCallback(() => {
+    const div2 = document.getElementById('featureId');
+    if (div2) {
+      div2.scrollIntoView({ behavior: 'smooth' });
+    }
+  }, []);
+
   return (
     <>
       <MainHeader isScrollPage={isScrollPage}>
@@ -60,9 +68,9 @@ const Header: React.FC<Props> = (Props) => {
             </Logo>
             <Rightheader>
               <Links>
-                <Link href={''} className='link'>
+                <div className='flink' onClick={onClickFeature}>
                   Features
-                </Link>
+                </div>
                 <Link href={'/contact-us'} className='link'>
                   Contact Us
                 </Link>
@@ -84,9 +92,9 @@ const Header: React.FC<Props> = (Props) => {
                     <Dropcontent>
                       <Topcontent>
                         <Links>
-                          <Link href={''} className='link'>
+                          <div className='flink' onClick={onClickFeature}>
                             Features
-                          </Link>
+                          </div>
                           <Link href={''} className='link'>
                             About Us
                           </Link>
