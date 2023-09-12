@@ -31,9 +31,8 @@ const MainHeader = styled.div<Props>`
     props.isScrollPage &&
     css`
       padding: 16px 0;
-      background: rgba(255, 255, 255, 0.65);
+      background: #fff;
       box-shadow: 0px 2px 12px 0px rgba(0, 0, 0, 0.06);
-      backdrop-filter: blur(20px);
     `};
 `;
 const Maindiv = styled.div`
