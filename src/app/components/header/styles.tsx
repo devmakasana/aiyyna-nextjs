@@ -77,6 +77,11 @@ const Links = styled.div`
     color: ${colors.title};
     ${ButtonText}
   }
+  .flink {
+    color: ${colors.title};
+    ${ButtonText}
+    cursor: pointer;
+  }
   @media (max-width: 991px) {
     width: 100%;
     flex-direction: column;
