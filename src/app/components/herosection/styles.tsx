@@ -150,6 +150,7 @@ const Images = styled.div`
     border: 1px solid #dfe5f1;
     background: #d9d9d9;
     box-shadow: 0px 0px 14px 0px rgba(102, 94, 154, 0.1);
+    width: auto;
     @media screen and (max-width: 991px) {
       margin-right: 0;
       width: 100%;
