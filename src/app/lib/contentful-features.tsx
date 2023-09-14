@@ -1,10 +1,5 @@
 import { fetchGraphQL } from './contentful';
 
-const POST_GRAPHQL_METADATA = `
-seoMeta{
-  seoTitle
-}`
-
 const POST_GRAPHQL_FEATURS_CONTENT_DATA = `
 title
 slug
@@ -15,28 +10,30 @@ banner{
 serviceSectionContentCollection{
   items{
     title
-    name
     description
     banner{
       url
     }
   }
 }
+`;
+
+const POST_GRAPHQL_FEATURS_CONTENT_DATA2 = `
+seoMeta{
+  seoTitle
+}
 body{
   json
 }
-`;
+`
 
 const POST_GRAPHQL_FEATURES_DATA = `
-  title
-   slug
-   description
-   banner{
-      url
-   }
-   body{
-     json
-   }
+title
+slug
+description
+banner{
+  url
+}
 `;
 
 export async function getFeaturesWithSlug({ slug, preview }: { slug: string; preview: boolean }) {
@@ -53,14 +50,13 @@ export async function getFeaturesWithSlug({ slug, preview }: { slug: string; pre
     `query {
         featureCollection(where: { slug: "${slug}" }, preview: ${preview ? 'true' : 'false'}, limit: 1) {
                   items {
-                    ${POST_GRAPHQL_METADATA}
+                    ${POST_GRAPHQL_FEATURS_CONTENT_DATA2}
                   }
                 }
               }`
   );
   return { ...entries?.data?.featureCollection?.items[0], ...entries2?.data?.featureCollection?.items[0] };
 }
-
 
 export async function getAllFeaturesData() {
   const featuresData = await fetchGraphQL(
