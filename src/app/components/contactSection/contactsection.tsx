@@ -17,10 +17,6 @@ export default function Contactsection() {
             </Left>
             <Right>
               <Contactform />
-
-              {/* contact success  */}
-
-              {/* <Contactsuccess /> */}
             </Right>
           </Content>
         </Container>

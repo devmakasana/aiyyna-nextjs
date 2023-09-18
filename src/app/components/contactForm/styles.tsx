@@ -13,7 +13,7 @@ const Content = styled.div`
   box-shadow: 2px 2px 40px 0px rgba(102, 94, 154, 0.08);
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   padding: 32px;
   display: flex;
   flex-direction: column;
