@@ -1,12 +1,13 @@
 'use client';
 import React from 'react';
 import { Heading, Description } from './styles';
+import { isEmpty } from '@/app/helper/helper';
 
-export default function Requesttitle() {
+export default function Requesttitle({ title, description }: { title: string; description: string }) {
   return (
     <div>
-      <Heading>Request A Demo</Heading>
-      <Description>Just answer a few simple questions so we can personalise the right experience for you.</Description>
+      {!isEmpty(title) && <Heading>{title}</Heading>}
+      {!isEmpty(description) && <Description>{description}</Description>}
     </div>
   );
 }
