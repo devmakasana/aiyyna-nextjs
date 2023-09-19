@@ -1,6 +1,6 @@
 'use client';
 import React, { useCallback, useState } from 'react';
-import { Content, Form, Label, Main, First, Second, Third, Textarea, Error } from './styles';
+import { Content, Form, Label, Main, First, Second, Third, Textarea, Error, Buttons } from './styles';
 import Input from '../input/input';
 import Button from '../button/button';
 import { addNewContact } from '@/app/lib/contentful-contact';
@@ -78,6 +78,7 @@ export default function Contactform() {
                 <Label>How can we help you?</Label>
                 <Textarea placeholder={'How can we help you?'} onChange={(e: any) => setMessage(e.target.value)} />
               </Third>
+              <Buttons>
               <Button title='Send Message' width={165} type='submit' />
               {apiError && !emailError && (
                 <Error>
@@ -85,6 +86,7 @@ export default function Contactform() {
                   <p>Somthing Went Wrong! Please Try Again!</p>
                 </Error>
               )}
+              </Buttons>
             </Form>
           </Content>
         )}

@@ -95,4 +95,10 @@ const Error = styled.div`
     }
   }
 `;
-export { Content, Form, Label, Main, First, Second, Third, Textarea, Error };
+const Buttons = styled.div`
+ display: flex;
+ flex-direction: row;
+ gap: 8px;
+ align-items: center;
+`;
+export { Content, Form, Label, Main, First, Second, Third, Textarea, Error,Buttons };
