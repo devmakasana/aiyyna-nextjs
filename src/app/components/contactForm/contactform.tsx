@@ -12,16 +12,15 @@ export default function Contactform() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [emailError, setEmailError] = useState('');
+  const [emailError, setEmailError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [apiError, setApiError] = useState(false);
   const onSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
-      setEmailError('');
+      setEmailError(false);
       if (!isEmail(email)) {
-        let validEmail = 'Please enter a valid email address.';
-        setEmailError(validEmail);
+        setEmailError(true);
         return;
       }
       try {
@@ -71,7 +70,7 @@ export default function Contactform() {
                   placeholder={'Enter your email address'}
                   type={'text'}
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
-                  hasError={!isEmpty(emailError)}
+                  hasError={emailError === true}
                   errorMessage={'Please enter a valid email address.'}
                 />
               </Second>
@@ -80,7 +79,7 @@ export default function Contactform() {
                 <Textarea placeholder={'How can we help you?'} onChange={(e: any) => setMessage(e.target.value)} />
               </Third>
               <Button title='Send Message' width={165} type='submit' />
-              {apiError && (
+              {apiError && !emailError && (
                 <Error>
                   <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
                   <p>Somthing Went Wrong! Please Try Again!</p>
