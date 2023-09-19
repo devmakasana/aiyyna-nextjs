@@ -1,11 +1,12 @@
 'use client';
 import React, { useCallback, useState } from 'react';
-import { Content, Form, Label, Main, First, Second, Third, Textarea } from './styles';
+import { Content, Form, Label, Main, First, Second, Third, Textarea, Error } from './styles';
 import Input from '../input/input';
 import Button from '../button/button';
 import { addNewContact } from '@/app/lib/contentful-contact';
 import Contactsuccess from '../contactSuccess/contactsuccess';
 import { isEmail, isEmpty } from '@/app/helper/helper';
+import SVGIcon from '../../../../public/assets/svg/SVGIcon';
 
 export default function Contactform() {
   const [name, setName] = useState('');
@@ -13,7 +14,7 @@ export default function Contactform() {
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
-
+  const [apiError, setApiError] = useState(false);
   const onSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
@@ -32,10 +33,12 @@ export default function Contactform() {
         };
         const result = await addNewContact(payload);
         if (result) {
+          setIsSuccess(true);
           setName('');
           setEmail('');
           setMessage('');
-          setIsSuccess(true);
+        } else {
+          setApiError(true);
         }
       } catch (error) {
         console.log('error', error);
@@ -47,7 +50,7 @@ export default function Contactform() {
   return (
     <div>
       <Main>
-        {!isSuccess && (
+        {(!isSuccess || apiError) && (
           <Content>
             <Form onSubmit={onSubmit}>
               <First>
@@ -77,6 +80,12 @@ export default function Contactform() {
                 <Textarea placeholder={'How can we help you?'} onChange={(e: any) => setMessage(e.target.value)} />
               </Third>
               <Button title='Send Message' width={165} type='submit' />
+              {apiError && (
+                <Error>
+                  <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
+                  <p>Somthing Went Wrong! Please Try Again!</p>
+                </Error>
+              )}
             </Form>
           </Content>
         )}

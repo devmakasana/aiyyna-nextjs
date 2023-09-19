@@ -78,4 +78,21 @@ const Textarea = styled.textarea`
     border: 1px solid #635bff;
   }
 `;
-export { Content, Form, Label, Main, First, Second, Third, Textarea };
+
+const Error = styled.div`
+  display: flex;
+  gap: 5px;
+  right: 0;
+  top: -25px;
+  p {
+    ${InputTitle}
+    color: ${colors.red};
+    white-space: nowrap;
+  }
+  @media (max-width: 449px) {
+    p {
+      display: none;
+    }
+  }
+`;
+export { Content, Form, Label, Main, First, Second, Third, Textarea, Error };
