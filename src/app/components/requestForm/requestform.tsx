@@ -1,12 +1,13 @@
 'use client';
 import React, { useCallback, useState } from 'react';
-import { Main, Content, First, Label } from './styles';
+import { Main, Content, First, Label, Error, Buttons } from './styles';
 import Input from '../input/input';
 import Button from '../button/button';
 import { Container } from '@/app/styles/commoncontainer';
 import { isEmail } from '@/app/helper/helper';
 import { addNewContact } from '@/app/lib/contentful-contact';
 import Requestsuccess from '../requestSuccess/requestsuccess';
+import SVGIcon from '../../../../public/assets/svg/SVGIcon';
 
 export default function Requestform() {
   const [fullName, setFullName] = useState('');
@@ -15,6 +16,7 @@ export default function Requestform() {
   const [phone, setPhone] = useState('');
   const [isSuccess, setIsSuccess] = useState(false);
   const [emailError, setEmailError] = useState(false);
+  const [apiError, setApiError] = useState(false);
 
   const onSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
@@ -39,6 +41,8 @@ export default function Requestform() {
           setWorkEmail('');
           setPhone('');
           setIsSuccess(true);
+        } else {
+          setApiError(true);
         }
       } catch (error) {
         console.log('error', error);
@@ -94,7 +98,15 @@ export default function Requestform() {
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
                 />
               </First>
-              <Button title='Request Demo' width={164} />
+              <Buttons>
+                <Button title='Request Demo' width={164} />
+                {apiError && !emailError && (
+                  <Error>
+                    <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
+                    <p>Somthing Went Wrong! Please Try Again!</p>
+                  </Error>
+                )}
+              </Buttons>
             </Content>
           </form>
         )}
