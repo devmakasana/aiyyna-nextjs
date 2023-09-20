@@ -4,23 +4,19 @@ import React from 'react';
 import { Content, Left, Right, Main } from './styles';
 import Contactleft from '../contactLeft/contactleft';
 import Contactform from '../contactForm/contactform';
-import Contactsuccess from '../contactSuccess/contactsuccess';
+import { ContactPageModel } from '@/app/model/contactModel';
 
-export default function Contactsection() {
+export default function Contactsection({details}: {details: ContactPageModel}) {
   return (
     <div>
       <Main>
         <Container>
           <Content>
             <Left>
-              <Contactleft />
+              <Contactleft details={details}/>
             </Left>
             <Right>
               <Contactform />
-
-              {/* contact success  */}
-
-              {/* <Contactsuccess /> */}
             </Right>
           </Content>
         </Container>

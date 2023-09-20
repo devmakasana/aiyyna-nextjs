@@ -12,10 +12,11 @@ interface Props {
   value?: any;
   maxLength?: number;
   hasError?: boolean;
+  errorMessage?: string
 }
 
 const Input: React.FC<Props> = (Props) => {
-  const { placeholder, type = 'text', width, inpercentwidth, onChange, value, maxLength, hasError, ...props } = Props;
+  const { placeholder, type = 'text', width, inpercentwidth, onChange, value, maxLength, hasError, errorMessage, ...props } = Props;
 
   return (
     <>
@@ -24,7 +25,7 @@ const Input: React.FC<Props> = (Props) => {
           {hasError && (
             <Error>
               <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
-              <p>This is an error message.</p>
+              <p>{errorMessage}</p>
             </Error>
           )}
           <Inputbox
@@ -35,6 +36,7 @@ const Input: React.FC<Props> = (Props) => {
             value={value}
             maxLength={maxLength}
             hasError={hasError}
+            required={true}
             {...props}
           />
         </Maindiv>

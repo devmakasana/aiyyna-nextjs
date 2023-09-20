@@ -1,16 +1,19 @@
 import React from 'react';
 import { Main, Title, Description, Heading, Subheading } from './styles';
-export default function Contactleft() {
+import { isEmpty } from '@/app/helper/helper';
+import { ContactPageModel } from '@/app/model/contactModel';
+export default function Contactleft({ details }: { details: ContactPageModel }) {
   return (
     <div>
       <Main>
-        <Title>Contact</Title>
-        <Description>
-          Any Questions? Comments? Interested in seeing a demo? Send us a message, and we'll get back to you within 24
-          hours.
-        </Description>
-        <Heading>Email Address</Heading>
-        <Subheading>hello@aiyyna.io</Subheading>
+        {!isEmpty(details?.title) && <Title>{details?.title}</Title>}
+        {!isEmpty(details?.description) && <Description>{details?.description}</Description>}
+        {!isEmpty(details?.email) && (
+          <>
+            <Heading>Email Address</Heading>
+            <Subheading>{details?.email}</Subheading>
+          </>
+        )}
       </Main>
     </div>
   );

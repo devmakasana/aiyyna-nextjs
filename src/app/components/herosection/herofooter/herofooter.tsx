@@ -4,14 +4,14 @@ import { Content, Icons, Maindiv, Title } from './styles';
 import Image from 'next/image';
 import { Container } from '@/app/styles/commoncontainer';
 import { isEmpty } from '@/app/helper/helper';
-import { CompanySectionContentCollectionItemsModel } from '@/app/model/homePageModel';
+import { compnySectionCollectionItemsModel } from '@/app/model/bookDemoModel';
 
 export default function Herofooter({
   companyLogos,
   companyTitle
 }: {
-  companyLogos?: CompanySectionContentCollectionItemsModel[];
-  companyTitle?: string;
+  companyLogos: compnySectionCollectionItemsModel[];
+  companyTitle: string;
 }) {
   const renderCompanyLogos = useMemo(() => {
     if (!isEmpty(companyLogos)) {

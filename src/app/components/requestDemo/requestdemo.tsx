@@ -6,18 +6,18 @@ import Requestform from '../requestForm/requestform';
 import Image from 'next/image';
 import Requestsuccess from '../requestSuccess/requestsuccess';
 import Requesttitle from '../requestTitle/requesttitle';
+import { isEmpty } from '@/app/helper/helper';
+import { BookDemoModel } from '@/app/model/bookDemoModel';
 
-export default function Requestdemo() {
+export default function Requestdemo({ details }: { details: BookDemoModel }) {
   return (
     <div>
       <Container>
         <Main>
           <Content>
-            <Requesttitle />
+            {!isEmpty(details?.title) && !isEmpty(details?.description) && <Requesttitle title={details?.title} description={details?.description} />}
             <Form>
               <Requestform />
-              {/* Request demo thanku you card */}
-              {/* <Requestsuccess /> */}
             </Form>
           </Content>
           <div className='image-purple'>
