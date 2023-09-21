@@ -15,23 +15,21 @@ async function getcontent() {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const data = await getcontent();
-  const header = data?.filter((item: { name: string }) => item?.name === 'Head')?.[0] ?? null;
-  const afterBody = data?.filter((item: { name: string }) => item?.name === 'After Body Tag Start')?.[0] ?? null;
-  const beforeBody = data?.filter((item: { name: string }) => item?.name === 'Before Body Tag Close')?.[0] ?? null;
+  const header = data?.find((item: { name: string }) => item?.name === 'Head');
+  const afterBody = data?.find((item: { name: string }) => item?.name === 'After Body Tag Start');
+  const beforeBody = data?.find((item: { name: string }) => item?.name === 'Before Body Tag Close');
   const newData = { header, afterBody, beforeBody };
 
   return (
-    <html lang='en'>
-      <head>
-        {!isEmpty(newData?.header?.code) && process.env.NODE_ENV === 'production' && parse(newData?.header?.code)}
-      </head>
-      <body>
-        {!isEmpty(newData?.afterBody?.code) && process.env.NODE_ENV === 'production' && parse(newData?.afterBody?.code)}
-        {children}
-        {!isEmpty(newData?.beforeBody?.code) &&
-          process.env.NODE_ENV === 'production' &&
-          parse(newData?.beforeBody?.code)}
-      </body>
-    </html>
+    <>
+      <html lang='en'>
+        <head>{!isEmpty(newData?.header?.code) && parse(newData?.header?.code)}</head>
+        <body>
+          {!isEmpty(newData?.afterBody?.code) && parse(newData?.afterBody?.code)}
+          {children}
+          {!isEmpty(newData?.beforeBody?.code) && parse(newData?.beforeBody?.code)}
+        </body>
+      </html>
+    </>
   );
 }
