@@ -28,11 +28,8 @@ export default function Requestform() {
       }
       try {
         const payload = {
-          full_name: fullName,
-          company_name: companyName,
-          work_email: workEmail,
-          phone: phone,
-          type: 'bookDemo'
+          htmlMessage: `<div><p><strong>Name</strong> : ${fullName}</p><br/><p><strong>Company Name</strong> : ${companyName}</p><br/><p><strong>Work Email</strong> : ${workEmail}</p><br/><p><strong>Phone</strong> : ${phone}</p><br/></div>`,
+          type: 'Book_Demo'
         };
         const result = await addNewContact(payload);
         if (result) {
