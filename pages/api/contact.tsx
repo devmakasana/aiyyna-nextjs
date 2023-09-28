@@ -7,13 +7,13 @@ interface Data {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
   try {
-    const { htmlMessage, type } = req.body;
-    const resend = new Resend(process.env.WEB_HOOK_API);
+    const { htmlMessage, subject } = req.body;
+    const resend = new Resend(process.env.RESEND_API_KEY);
     resend.emails
       .send({
-        from: `${process.env.SENDER_EMAIL}`,
-        to: `${process.env.RECEIVER_EMAIL}`,
-        subject: type,
+        from: `${process.env.DEMO_EMAIL_FROM}`,
+        to: `${process.env.DEMO_EMAIL_TO}`,
+        subject: subject,
         html: htmlMessage
       })
       .then((response) => {
