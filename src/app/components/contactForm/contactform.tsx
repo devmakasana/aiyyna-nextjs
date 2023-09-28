@@ -27,7 +27,7 @@ export default function Contactform() {
       try {
         const payload = {
           htmlMessage: `<div><p><strong>Name</strong> : ${name}</p><br/><p><strong>Email</strong> : ${email}</p><br/><p><strong>Message</strong> : ${message}</p><br/></div>`,
-          type: 'Contact'
+          subject: 'Contact Us'
         };
         const result = await addNewContact(payload);
         if (result) {
