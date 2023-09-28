@@ -28,7 +28,7 @@ export default function Requestform() {
       }
       try {
         const payload = {
-          htmlMessage: `<div><p><strong>Name</strong> : ${fullName}</p><br/><p><strong>Company Name</strong> : ${companyName}</p><br/><p><strong>Work Email</strong> : ${workEmail}</p><br/><p><strong>Phone</strong> : ${phone}</p><br/></div>`,
+          htmlMessage: `<div><h3>New Book Demo from ${fullName}</h3><div><strong>Name</strong> : ${fullName}<br/><strong>Company Name</strong> : ${companyName}<br/><strong>Work Email</strong> : ${workEmail}<br/><strong>Phone</strong> : ${phone}<br/></div></div>`,
           subject: 'Request A Demo'
         };
         const result = await addNewContact(payload);
