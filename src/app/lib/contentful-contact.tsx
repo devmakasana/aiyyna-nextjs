@@ -6,10 +6,9 @@ import { fetchGraphQL } from './contentful';
  */
 export const addNewContact = async (payload: object) => {
   try {
-    const newpayload = { payload };
     const response = await fetch('/api/contact', {
       method: 'POST',
-      body: JSON.stringify(newpayload),
+      body: JSON.stringify(payload),
       headers: {
         'Content-Type': 'application/json'
       }
