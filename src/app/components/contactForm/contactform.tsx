@@ -15,6 +15,7 @@ export default function Contactform() {
   const [emailError, setEmailError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [apiError, setApiError] = useState(false);
+
   const onSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
       e.preventDefault();
@@ -25,10 +26,8 @@ export default function Contactform() {
       }
       try {
         const payload = {
-          name: name,
-          email: email,
-          message: !isEmpty(message) ? message : null,
-          type: 'contactUs'
+          htmlMessage: `<div><p><strong>Name</strong> : ${name}</p><br/><p><strong>Email</strong> : ${email}</p><br/><p><strong>Message</strong> : ${message}</p><br/></div>`,
+          subject: 'Contact Us'
         };
         const result = await addNewContact(payload);
         if (result) {
@@ -79,13 +78,13 @@ export default function Contactform() {
                 <Textarea placeholder={'How can we help you?'} onChange={(e: any) => setMessage(e.target.value)} />
               </Third>
               <Buttons>
-              <Button title='Send Message' width={165} type='submit' />
-              {apiError && !emailError && (
-                <Error>
-                  <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
-                  <p>Somthing Went Wrong! Please Try Again!</p>
-                </Error>
-              )}
+                <Button title='Send Message' width={165} type='submit' />
+                {apiError && !emailError && (
+                  <Error>
+                    <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
+                    <p>Somthing Went Wrong! Please Try Again!</p>
+                  </Error>
+                )}
               </Buttons>
             </Form>
           </Content>
