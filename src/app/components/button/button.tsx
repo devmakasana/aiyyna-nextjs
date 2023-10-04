@@ -1,5 +1,5 @@
 import React, { SyntheticEvent } from 'react';
-import { Buttons } from './styles';
+import { ButtonWrap, Buttons } from './styles';
 import { Style } from 'util';
 
 interface Props {
@@ -11,21 +11,25 @@ interface Props {
   style?: Style;
   id?: string;
   href?: string;
+  isLoading?: boolean;
+  isDelete?: any;
 }
 
 const Button: React.FC<Props> = (Props) => {
-  const { title, type, onClick, secondary, style, width, ...props } = Props;
+  const { title, type, onClick, secondary, style, width, isLoading, isDelete, ...props } = Props;
   return (
-    <Buttons
-      onClick={(e: React.SyntheticEvent<Element, Event>) => {
-        onClick && onClick(e);
-      }}
-      secondary={secondary}
-      type={type}
-      width={width}
-      {...props}>
-      <a href={props.href}>{title || ''}</a>
-    </Buttons>
+    <ButtonWrap isLoading={isLoading} width={width} style={style} isDelete={isDelete}>
+      <Buttons
+        onClick={(e: React.SyntheticEvent<Element, Event>) => {
+          onClick && onClick(e);
+        }}
+        secondary={secondary}
+        type={type}
+        width={width}
+        {...props}>
+        <a href={props.href}>{title || ''}</a>
+      </Buttons>
+    </ButtonWrap>
   );
 };
 
