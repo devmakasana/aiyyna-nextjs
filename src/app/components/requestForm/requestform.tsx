@@ -17,6 +17,7 @@ export default function Requestform() {
   const [isSuccess, setIsSuccess] = useState(false);
   const [emailError, setEmailError] = useState(false);
   const [apiError, setApiError] = useState(false);
+  const [loading, setLoading] = useState(false)
 
   const onSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
@@ -26,7 +27,9 @@ export default function Requestform() {
         setEmailError(true);
         return;
       }
+      setLoading(false)
       try {
+        setLoading(true)
         const payload = {
           htmlMessage: `<div><h3>New Book Demo from ${fullName}</h3><div><strong>Name</strong> : ${fullName}<br/><strong>Company Name</strong> : ${companyName}<br/><strong>Work Email</strong> : ${workEmail}<br/><strong>Phone</strong> : ${phone}<br/></div></div>`,
           subject: 'Request A Demo'
@@ -43,6 +46,8 @@ export default function Requestform() {
         }
       } catch (error) {
         console.log('error', error);
+      } finally{
+        setLoading(false)
       }
     },
     [companyName, fullName, phone, workEmail]
@@ -96,7 +101,7 @@ export default function Requestform() {
                 />
               </First>
               <Buttons>
-                <Button title='Request Demo' width={164} />
+                <Button title='Request Demo' width={164} isLoading={loading}/>
                 {apiError && !emailError && (
                   <Error>
                     <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />

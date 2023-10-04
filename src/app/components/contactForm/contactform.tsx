@@ -15,6 +15,7 @@ export default function Contactform() {
   const [emailError, setEmailError] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
   const [apiError, setApiError] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = useCallback(
     async (e: React.SyntheticEvent) => {
@@ -24,7 +25,9 @@ export default function Contactform() {
         setEmailError(true);
         return;
       }
+      setLoading(false);
       try {
+        setLoading(true);
         const payload = {
           htmlMessage: `<div><h3>New Lead from ${name}</h3><div><strong>Name</strong> : ${name}<br/><strong>Email</strong> : ${email}<br/><strong>Message</strong> : ${message}<br/></div></div>`,
           subject: 'Contact Us'
@@ -40,6 +43,8 @@ export default function Contactform() {
         }
       } catch (error) {
         console.log('error', error);
+      } finally {
+        setLoading(false);
       }
     },
     [email, message, name]
@@ -78,7 +83,7 @@ export default function Contactform() {
                 <Textarea placeholder={'How can we help you?'} onChange={(e: any) => setMessage(e.target.value)} />
               </Third>
               <Buttons>
-                <Button title='Send Message' width={165} type='submit' />
+                <Button title='Send Message' width={165} type='submit' isLoading={loading} />
                 {apiError && !emailError && (
                   <Error>
                     <SVGIcon name='error-icon' width='16' height='16' viewBox='0 0 16 16' fill='none' />
